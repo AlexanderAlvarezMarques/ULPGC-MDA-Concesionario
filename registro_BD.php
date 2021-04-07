@@ -4,7 +4,7 @@ class DB{
     public static function get(){
         if(self::$connection === null){
             $host = 'localhost';
-            $dbname = 'daw2';
+            $dbname = 'mda_bd';
             $username = 'root';
             $password = 'root';
             self::$connection = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
