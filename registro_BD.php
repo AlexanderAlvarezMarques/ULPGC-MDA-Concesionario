@@ -3,7 +3,7 @@ class DB{
     private static $connection=null;
     public static function get(){
         if(self::$connection === null){
-            $host = 'localhost';
+            $host = 'localhost';        
             $dbname = 'mda_bd';
             $username = 'root';
             $password = 'root';
@@ -13,6 +13,7 @@ class DB{
             self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         return self::$connection;
+        
     }
     
     public static function execute_sql($sql,$parms=null){
@@ -33,39 +34,19 @@ class DB{
     //USER
     public static function user_exists($usuario,$pass, &$res){
         $db = self::get();
-        $inst=$db->prepare('SELECT * FROM usuario WHERE usuarionombre=? and usuariopassword=?');
+        $inst=$db->prepare('SELECT * FROM usuarios WHERE nombre_usuario=? and password_usuario=?');
         $inst->execute(array($usuario,md5($pass)));
         $inst->setFetchMode(PDO::FETCH_NAMED);
         $res=$inst->fetchAll();
         return count($res) == 1;
     }
     
-    //Función para obtener los datos de un usuario por su id
-    public static function getUser($idUser, &$res){
-        $db = self::get();
-        $inst=$db->prepare("SELECT * FROM usuario WHERE id=".$idUser."");
-        $inst->execute();
-        $inst->setFetchMode(PDO::FETCH_LAZY);
-        $res=$inst->fetch();
-        return $res;
-    }
-    
-    //Función para obtener los usuarios y sus correspondientes datos
-    public static function getUsers(&$res){
-        $db = self::get();
-        $inst=$db->prepare("SELECT * FROM usuario");
-        $inst->execute();
-        $inst->setFetchMode(PDO::FETCH_NAMED);
-        $res=$inst->fetchAll();
-        return $res;
-    }
-
     //Añadir usuario
-    public static function addUser($cuenta, $clave, $nombre, $email, &$res){
+    public static function addUser($cuenta,$dni, $clave, $email, &$res){
         $db = self::get();
-        $inst=$db->prepare("INSERT INTO usuario(usuarioid, usuariopassword, usuarionombre, usuarioemail) VALUES (?,?,?,?)");
+        $inst=$db->prepare("INSERT INTO usuarios(nombre_usuario,dni_usuario,password_usuario, correo_usuario) VALUES (?,?,?,?)");
         if($inst){
-            $res=$inst->execute(array($cuenta, md5($clave), $nombre, $email));
+            $res=$inst->execute(array($cuenta,$dni, md5($clave),$email));
         }
         return $res;
     }
