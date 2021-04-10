@@ -145,7 +145,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color: rgba(182, 182, 182, 0.9);
 }
 
 .cta .cta-inner {
@@ -163,7 +163,7 @@ p {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  border: 0.5rem solid rgba(25, 0, 255, 1);
   z-index: -1;
 }
 
@@ -253,4 +253,55 @@ p {
 
 .font-weight-light {
   font-weight: 100 !important;
+}
+
+.ad-panel{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+
+.single-ad{
+  margin-block: 20px;
+  width: 700px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+	flex-direction: row;
+  background-color: #b9b9b9;
+}
+
+.ad-image{
+  width:250px;
+  height:200px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  object-fit: cover;
+}
+
+.car-details{
+  padding: 15px;
+}
+
+.prices{
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  width: auto;
+  
+}
+
+.prices h2{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -62px;
+  font-size: xx-large;
+}
+
+.fav-icon {
+  position:absolute; 
+  float: right; 
+  margin-right: 0; 
+  margin-left: 660px; 
+  margin-top: 10px;
 }
