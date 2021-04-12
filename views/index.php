@@ -40,7 +40,7 @@
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Acerda de </span>
+              <span class="section-heading-upper">Acerda de</span>
               <span class="section-heading-lower">Nosotros</span>
             </h2>
             <h6>Especializados en el cliente, disponemos de concesionarios y centros de servicios en Gran Canaria, Tenerife, Fuerteventura y Lanzarote, ofreciendo un servicio de compra-venta de vehículos nuevos y seminuevos entre Islas y Península.</h6>
