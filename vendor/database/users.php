@@ -15,6 +15,18 @@ class Users {
         return $users;
     }
 
+    public static function findUser($username) {
+
+        $users = DB::executeSQL("SELECT * FROM users WHERE username=?", [$username]);
+
+        if ($users === null || count($users) == 0) {
+            return null;
+        }
+        
+        return $users[0];
+
+    }
+
 }
 
 ?>

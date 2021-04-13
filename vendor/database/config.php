@@ -27,7 +27,7 @@ class DB {
         self::$conn = null;
     }
 
-    public static function executeSQL ($SQL) {
+    public static function executeSQL ($SQL, $params=null) {
 
         if (self::$conn === null) {
             self::connect();
@@ -37,7 +37,7 @@ class DB {
 
         if ($exec) {
 
-            if ($exec->execute()) {
+            if ($exec->execute($params)) {
                 $exec->setFetchMode(PDO::FETCH_NAMED);
                 $query = $exec->fetchAll();
                 return $query;
