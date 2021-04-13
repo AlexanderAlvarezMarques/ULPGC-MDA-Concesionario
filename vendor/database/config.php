@@ -10,8 +10,8 @@ class DB {
             
             $host = 'localhost';        
             $dbname = 'mda_bd';
-            $username = 'root';
-            $password = 'root';
+            $username = 'mda';
+            $password = 'mda';
 
             self::$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
             self::$conn->exec('PRAGMA foreign_keys = ON;');

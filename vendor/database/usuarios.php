@@ -27,7 +27,11 @@ class Usuarios {
 
     //Añadir usuario
     public static function addUser($cuenta,$dni, $clave, $email){
-        return DB::executeSQL("INSERT INTO usuarios(nombre_usuario,dni_usuario,password_usuario, correo_usuario) VALUES (?,?,?,?)",[$cuenta, $dni, $clave, $email]);
+
+        $clave = md5($clave);
+        $result = DB::executeSQL("INSERT INTO usuarios(nombre_usuario,dni_usuario,password_usuario, correo_usuario) VALUES (?,?,?,?)",[$cuenta, $dni, $clave, $email]);
+
+        return $result === null ? false : true;
     }
 
 }
