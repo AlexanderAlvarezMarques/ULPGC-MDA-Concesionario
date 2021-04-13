@@ -5,8 +5,8 @@ class DB {
         if(self::$connection === null){
             $host = 'localhost';        
             $dbname = 'mda_bd';
-            $username = 'mda';
-            $password = 'mda';
+            $username = 'root';
+            $password = 'root';
             self::$connection = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
             self::$connection->exec('PRAGMA foreign_keys = ON;');
             self::$connection->exec('PRAGMA encoding="UTF-8";');
@@ -31,24 +31,7 @@ class DB {
     }
 
 
-    //USER
-    public static function user_exists($usuario,$pass, &$res){
-        $db = self::get();
-        $inst=$db->prepare('SELECT * FROM users WHERE username=? and password=?');
-        $inst->execute(array($usuario,md5($pass)));
-        $inst->setFetchMode(PDO::FETCH_NAMED);
-        $res=$inst->fetchAll();
-        return count($res) == 1;
-    }
     
-    //Añadir usuario
-    public static function addUser($cuenta,$dni, $clave, $email, &$res){
-        $db = self::get();
-        $inst=$db->prepare("INSERT INTO users(username,dni,password, email) VALUES (?,?,?,?)");
-        if($inst){
-            $res=$inst->execute(array($cuenta,$dni, md5($clave),$email));
-        }
-        return $res;
-    }
+    
 } 
 ?>

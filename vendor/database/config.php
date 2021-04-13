@@ -10,8 +10,8 @@ class DB {
             
             $host = 'localhost';        
             $dbname = 'mda_bd';
-            $username = 'mda';
-            $password = 'mda';
+            $username = 'root';
+            $password = 'root';
 
             self::$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
             self::$conn->exec('PRAGMA foreign_keys = ON;');
@@ -36,17 +36,13 @@ class DB {
         $exec = self::$conn->prepare($SQL);
 
         if ($exec) {
-
             if ($exec->execute($params)) {
                 $exec->setFetchMode(PDO::FETCH_NAMED);
                 $query = $exec->fetchAll();
                 return $query;
             }
-
         }
-
         self::disconnect();
-
         return null;
     }
 

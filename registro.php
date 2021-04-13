@@ -1,5 +1,5 @@
 <?php
-    include_once 'registro_BD.php';
+    include_once 'vendor/database/usuarios.php';
     
     $res = new stdClass();
     $res->inserted = true; //Formato objeto con propiedad deleted (por defecto a false)
@@ -10,13 +10,12 @@
         $datos = json_decode($datoscrudos);
         if (isset($datos))
         {
-            DB::addUser($datos->usuario, $datos->dni, $datos->password, $datos->correo, $resultado);
+            $resultado = Usuarios::addUser($datos->usuario, $datos->dni, $datos->password, $datos->correo);
             if (isset($resultado))
             {
-                $res->message = 'Usuario insertado.';
+                echo "<script type='text/javascript'>alert('Usuario añadido')</script>";
             } else {
-                $res->inserted = false;
-                $res->message = 'Usuario no insertado.';
+                echo "<script type='text/javascript'>alert('Usuario no añadido')</script>";
             }
         }
     }
