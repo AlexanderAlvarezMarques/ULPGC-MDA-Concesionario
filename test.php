@@ -1,17 +1,17 @@
 <?php
 
-include_once("./vendor/database/users.php");
-include_once("./vendor/database/advertisements.php");
+include "autoload.php";
 
+$host = getEnviroment("DB_HOST");
+$name = getEnviroment("DB_NAME");
+$username = getEnviroment("DB_USERNAME");
+$password = getEnviroment("DB_PASSWORD");
+$port = getEnviroment("DB_PORT");
 
-$users = Users::getUsers();
-
-print_r($users);
-
-$ads = Advertisement::getAdvertisements();
-
-echo "<br><br>";
-
-print_r($ads);
+echo "Host: $host<br>";
+echo "Name: $name<br>";
+echo "Username: $username<br>";
+echo "Password: $password<br>";
+echo "Port: $port";
 
 ?>
