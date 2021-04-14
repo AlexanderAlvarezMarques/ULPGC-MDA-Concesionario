@@ -1,5 +1,7 @@
 <?php
 
+include (dirname(__DIR__).'../../autoload.php');
+
 class DB {
 
     private static $conn = null;
@@ -8,12 +10,19 @@ class DB {
 
         if(self::$conn === null){
             
-            $host = 'localhost';        
-            $dbname = 'mda_bd';
-            $username = 'mda';
-            $password = 'mda';
+            $host = getEnviroment("DB_HOST");
+            $name = getEnviroment("DB_NAME");
+            $username = getEnviroment("DB_USERNAME");
+            $password = getEnviroment("DB_PASSWORD");
+            $port = getEnviroment("DB_PORT");
 
-            self::$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+            //$host = "localhost";
+            //$name = "mda_bd";
+            //$username = "mda";
+            //$password = "mda";
+            //$port = 3306;
+
+            self::$conn = new PDO("mysql:host=$host;dbname=$name", $username, $password);
             self::$conn->exec('PRAGMA foreign_keys = ON;');
             self::$conn->exec('PRAGMA encoding="UTF-8";');
             self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -58,5 +67,3 @@ class DB {
     }
 
 }
-
-?>
