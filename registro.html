@@ -52,11 +52,21 @@
                 data: JSON.stringify(datosRegistro),
                 contentType: "application/json;charset=utf-8",
                 dataType: "json",
-                success: function() {
-                    alert("Usuario añadido");
-                    window.location.href = "index.html";
+                success: function(res) {
+                    if (res.inserted)
+                    {
+                        alert("Usuario añadido");
+                        window.location.href = "index.html";
+                    }
+                    else
+                    {
+                        console.log(res.inserted);
+                        console.log(res.message);
+                        alert("Usuario no añadido");
+                    }
                 },
-                error: function() {
+                error: function(res) {
+                    console.log(res.responseText);
                     alert("Usuario no añadido");
                 }
             });

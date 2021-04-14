@@ -8,7 +8,7 @@
         $datoscrudos = file_get_contents("php://input"); //Leemos los datos
         $datos = json_decode($datoscrudos);
         if (isset($datos)){
-            $resultado = Usuarios::ckeckUserExist($datos->usuario);
+            $resultado = Usuarios::ckeckUserExist($datos->usuario,$datos->password);
             if ($resultado){
                 $res->message = 'Usuario existe.';
             } else {
