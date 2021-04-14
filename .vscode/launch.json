@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Chrome against localhost",
 
-            "url": "http://localhost/ULPGC-MDA-Concesionario/index.html",
+            "url": "http://localhost/ULPGC-MDA-Concesionario/views/index.php",
             "webRoot": "${workspaceFolder}"
         }
     ]

@@ -26,6 +26,9 @@
 					<a class="nav-link text-uppercase text-expanded" href="products.php">Products</a>
 				</li>
 				<li class="nav-item px-lg-5">
+					<a class="nav-link text-uppercase text-expanded" href="anuncios.php">Anuncios</a>
+				</li>
+				<li class="nav-item px-lg-5">
 					<a class="nav-link text-uppercase text-expanded" href="store.php">Store</a>
 				</li>
 			</ul>
