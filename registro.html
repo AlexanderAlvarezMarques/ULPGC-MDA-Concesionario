@@ -1,16 +1,20 @@
 <html>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
+    
     <script>
+
         function registrarse(){
-            var resultado = true;
+            
             var dni = $('#dni').val();
             var usuario = $('#cuenta').val();
             var contra = $('#clave').val();
             var confirmar = $('#confirmarclave').val();
             var correo = $('#correo').val();
             
-            var patron = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
-            var patron_dni = /[0-9]{8}[A-Z]/;
+            //var patron = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+            //var patron_dni = /[0-9]{8}[A-Z]/;
+            
+            /*
             if(dni.length === 0 && usuario.length === 0 && contra.length === 0 && confirmar.length === 0 && correo.length === 0){
                 alert('Algún campo esta vacio');
                 resultado = false;
@@ -33,8 +37,15 @@
                 "correo" : correo
                 };
             }
+            */
             
-            
+            var datosRegistro = {
+                "dni" : dni,
+                "usuario" : usuario,
+                "password" : contra,
+                "correo" : correo
+                };
+
             $.ajax({
                 url: "registro.php",
                 type: "POST",
@@ -42,21 +53,27 @@
                 contentType: "application/json;charset=utf-8",
                 dataType: "json",
                 success: function(res) {
-                    alert(res.message);
-                    window.location.href = "index.html";
+                    if (res.inserted)
+                    {
+                        alert("Usuario añadido");
+                        window.location.href = "index.html";
+                    }
+                    else
+                    {
+                        console.log(res.inserted);
+                        console.log(res.message);
+                        alert("Usuario no añadido");
+                    }
                 },
                 error: function(res) {
-                    //var obj = $.parseJSON(res);
-                    //convertir el objeto JSON a texto
-                    var json_string = JSON.stringify(res);
-                    console.log("Error: " + json_string);
-                    //convertir el texto a un nuevo objeto
-                    alert("Error: alert");
+                    console.log(res.responseText);
+                    alert("Usuario no añadido");
                 }
             });
             return;
         };
     </script>
+
     <head>
         <meta charset="utf-8">
         <link href="assets/css/login.css" rel="stylesheet" type="text/css">

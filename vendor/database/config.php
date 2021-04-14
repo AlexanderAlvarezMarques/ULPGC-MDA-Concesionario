@@ -23,7 +23,7 @@ class DB {
     }
 
     private static function disconnect () {
-        self::$conn->close();
+        //self::$conn->close();
         self::$conn = null;
     }
 
@@ -33,17 +33,28 @@ class DB {
             self::connect();
         }
 
+        $query = null;
         $exec = self::$conn->prepare($SQL);
 
         if ($exec) {
             if ($exec->execute($params)) {
-                $exec->setFetchMode(PDO::FETCH_NAMED);
-                $query = $exec->fetchAll();
-                return $query;
+                if (stripos($SQL, "SELECT ") !== false){
+                    $exec->setFetchMode(PDO::FETCH_NAMED);
+                    $query = $exec->fetchAll();
+                    if ($exec->rowCount() == 0){
+                        $query = null;
+                    }
+                }else{
+                    if ($exec->rowCount() == 0){
+                        $query = null;
+                    }else{
+                        $query = $exec->rowCount();
+                    }
+                }
             }
         }
         self::disconnect();
-        return null;
+        return $query;
     }
 
 }
