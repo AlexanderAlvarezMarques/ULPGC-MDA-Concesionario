@@ -13,7 +13,7 @@ include ("../partials/head.php");
   include ("../partials/header.php");
   ?>
 
-  <form id='loginForm' name="loginForm" method='post'>
+  <form id='loginForm' class="my-4" name="loginForm" method='post'>
     <label><img src='../Imagenes/LoginForm/usuarioprin.jpg' alt="Imagen de inicio"/></label>
     <section>
       <label><img src='../Imagenes/LoginForm/usuario.jpg' alt="Imagen de usuario"/></label>
@@ -25,7 +25,7 @@ include ("../partials/head.php");
     </section>
     <section>
       <input class='botonForm' style='margin-right:10%; float:left;' type='button' onclick='iniciarsesion()' value='Iniciar sesión'/>
-      <input class='botonForm' type='button' value='Registrarse' onclick="location.href='registro.html'">
+      <input class='botonForm' type='button' value='Registrarse' onclick="location.href='registro.php'">
     </section>
   </form>
 
