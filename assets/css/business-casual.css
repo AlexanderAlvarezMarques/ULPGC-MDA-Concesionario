@@ -10,12 +10,10 @@ html{
 }
 
 body {
-  
   font-family: 'Lora';
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(8, 8, 8, 0.65)), url("../img/fondo2.jpg");
+  background: rgb(102,102,102);
+  background: linear-gradient(135deg, rgba(102,102,102,1) 0%, rgba(0,0,0,1) 90%);
   background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
 }
 
 h1,

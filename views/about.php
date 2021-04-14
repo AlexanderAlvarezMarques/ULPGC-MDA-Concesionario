@@ -14,9 +14,6 @@ include ("../partials/head.php");
   ?>
 
     <div class="single-ad-about">
-      <div class="fav-icon-about">
-        <img src="../Imagenes/icons/heart_icon_empty.png" alt="" style="object-fit: contain;  width: 25px; height: 25px;">
-      </div>
       <img src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Foto de coche" class ="ad-image">
       <div class="car-details">
         <!-- Cambiar por variables -->
@@ -31,12 +28,15 @@ include ("../partials/head.php");
             <h2>33.990 €</h2></div>
           </div>
         </div>
+        <div class="fav-icon">
+          <img src="../Imagenes/icons/heart_icon_empty.png" alt="" style="object-fit: contain;  width: 25px; height: 25px;">
+        </div>
       </div>
-    </section>
-
-    <?php
-    include ("../partials/footer.php");
-    ?>
+    </div>
 
   </body>
-  </html>
+
+  <?php
+    include ("../partials/footer.php");
+  ?>
+</html>

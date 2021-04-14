@@ -49,10 +49,10 @@
       </div>
     </div>
   </section>
+</body>
 
 <?php
 	include ("../partials/footer.php");
 ?>
 
-</body>
 </html>

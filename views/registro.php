@@ -16,29 +16,25 @@
 
 <div>
             <form id='loginForm' class='my-4' name='loginForm' method='post'>
-                <label><img src='../Imagenes/LoginForm/usuarioprin.jpg'/></label>
+                <label><img src='../Imagenes/LoginForm/usuarioprin.png'  style="width: 125px; height: 125px;"/></label>
                 <section>
-                    <label><img src='../Imagenes/LoginForm/usuario.jpg'/></label>
                     <input id='cuenta' name='cuenta' type='text' placeholder='Usuario' value=''/>
                 </section>
                 <section>
-                    <label><img src='../Imagenes/LoginForm/usuario.jpg'/></label>
                     <input id='dni' name='dni' type='text' placeholder='DNI o NIE' value=''/>
                 </section>
                 <section>
-                    <label><img src='../Imagenes/LoginForm/contrasena.jpg'/></label>
                     <input id='clave' name='clave' type='password' placeholder='Contraseña' value=''/>
                 </section>
                 <section>
-                    <label><img src='../Imagenes/LoginForm/contrasena.jpg'/></label>
                     <input id='confirmarclave' name='confirmarclave' type='password' placeholder='Confirmar Contraseña' value=''/>
                 </section>
                 <section>
-                    <label><img src='../Imagenes/LoginForm/correo.png'/></label>
                     <input id='correo' name='correo' type='text' placeholder='Correo' value=''/>
                 </section>
                 <div>
-                    <input class='botonRegistrarse' type='button' onclick='registrarse()' value='Registrarse'/>
+                    <input style='margin-right:10%;' type='button' value='Volver' onclick="location.href='login.php'">
+                    <input type='button' onclick='registrarse()' value='Registrarse'/>
                 </div>
             </form>
         </div>
