@@ -5,18 +5,16 @@
 include ("../partials/head.php");
 ?>
 
+<link href="../assets/css/about.css" rel="stylesheet" type="text/css">
+
 <body>
 	
   <?php
   include ("../partials/header.php");
   ?>
 
-  HOLA
-
-  <section class="ad-panel">
-    HOLA2
-    <div class="single-ad">
-      <div class="fav-icon">
+    <div class="single-ad-about">
+      <div class="fav-icon-about">
         <img src="../Imagenes/icons/heart_icon_empty.png" alt="" style="object-fit: contain;  width: 25px; height: 25px;">
       </div>
       <img src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Foto de coche" class ="ad-image">
