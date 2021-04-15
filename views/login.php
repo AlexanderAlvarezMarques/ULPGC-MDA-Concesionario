@@ -2,6 +2,7 @@
 <html lang="es">
 
 <?php
+include ("../partials/login.php");
 include ("../partials/head.php");
 ?>
 
