@@ -1,20 +1,15 @@
 <?php
-
 include_once ("config.php");
-
 class Usuarios {
-
     public static function getUsers() {
-
         $users = DB::executeSQL("SELECT * FROM usuarios");
-
         if ($users === null) {
             return null;
         }
-
         return $users;
     }
 
+    //Iniciar Sesión
     public static function ckeckUserExist($username,$passwd){
         $users = DB::executeSQL("SELECT * FROM usuarios WHERE nombre_usuario = ? and password_usuario= ?",[$username,md5($passwd)]);
         if ($users === null) {

@@ -3,7 +3,6 @@
     $res = new stdClass();
     $res->inserted = true; //Formato objeto con propiedad deleted (por defecto a false)
     $res->message = ''; //Mensaje en caso de error
-
     try{
         $datoscrudos = file_get_contents("php://input"); //Leemos los datos
         $datos = json_decode($datoscrudos);
