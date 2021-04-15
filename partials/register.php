@@ -34,14 +34,14 @@
             
             
             $.ajax({
-                url: "registro.php",
+                url: "../registro.php",
                 type: "POST",
                 data: JSON.stringify(datosRegistro),
                 contentType: "application/json;charset=utf-8",
                 dataType: "json",
                 success: function(res) {
                     alert(res.message);
-                    window.location.href = "index.html";
+                    window.location.href = "../views/index.php";
                 },
                 error: function(res) {
                     //var obj = $.parseJSON(res);
