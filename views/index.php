@@ -40,10 +40,12 @@
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Acerda de</span>
-              <span class="section-heading-lower">Nosotros</span>
+              <span class="section-heading-upper">PIDE</span>
+              <span class="section-heading-lower">CITA</span>
             </h2>
-            <h6>Especializados en el cliente, disponemos de concesionarios y centros de servicios en Gran Canaria, Tenerife, Fuerteventura y Lanzarote, ofreciendo un servicio de compra-venta de vehículos nuevos y seminuevos entre Islas y Península.</h6>
+            <h6>Pide cita por teléfono para que uno de nuestros expertos te asesore para encontrar el modelo perfecto para ti.</h6>
+            <br>
+            <a class="nav-link text-expanded" style="font-family: 'Raleway'; font-size:X-Large" href="nosotros.php">Haz clic aqui</a>
           </div>
         </div>
       </div>
