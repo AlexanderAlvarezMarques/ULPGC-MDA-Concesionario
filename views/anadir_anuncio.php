@@ -18,25 +18,25 @@ include("../partials/head.php");
     <form id='loginForm' class="my-4" name="addForm" method='post'>
         <label><img src='../Imagenes/AddForm/car-xxl.png' alt="Imagen de inicio" style="width: 125px; height: 125px;" /></label>
         <section>
-            <input id='nombre_anuncio' name='nombre_anuncio' type='text' placeholder='Coche' value='' />
+            <input id='nombre_anuncio' name='nombre_anuncio' type='text' placeholder='Coche' value='' required/>
         </section>
         <section>
             <textarea id='descripcion_anuncio' name='descripcion_anuncio' type='text' placeholder='Descripcion' value='' rows="4"></textarea>
         </section>
         <section>
-            <input id='marca_anuncio' name='marca_anuncio' type='text' placeholder='Marca' value='' />
+            <input id='marca_anuncio' name='marca_anuncio' type='text' placeholder='Marca' value='' required/>
         </section>
         <section>
-            <input id='modelo_anuncio' name='modelo_anuncio' type='text' placeholder='Modelo' value='' />
+            <input id='modelo_anuncio' name='modelo_anuncio' type='text' placeholder='Modelo' value='' required/>
         </section>
         <section>
-            <input id='precio_anuncio' name='precio_anuncio' type='text' placeholder='Precio' value='' />
+            <input id='precio_anuncio' name='precio_anuncio' type='text' placeholder='Precio' value='' pattern="^[0-9]+" required/>
         </section>
         <section>
-            <input id='año_vehiculo_anuncio' name='año_vehiculo_anuncio' type='text' placeholder='Año' value='' />
+            <input id='año_vehiculo_anuncio' name='año_vehiculo_anuncio' type='text' placeholder='Año' value='' required/>
         </section>
         <section>
-            <input type="file" class="form-control" id="foto" name="foto" multiple>
+            <input type="file" class="form-control" id="foto" name="foto" multiple/>
         </section>
         <div>
             <input style='margin-right:10%;' type='button' value='Volver' onclick="location.href='index.php'">

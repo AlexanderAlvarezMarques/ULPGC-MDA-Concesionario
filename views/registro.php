@@ -30,7 +30,7 @@
                     <input id='confirmarclave' name='confirmarclave' type='password' placeholder='Confirmar Contraseña' value=''/>
                 </section>
                 <section>
-                    <input id='correo' name='correo' type='text' placeholder='Correo' value=''/>
+                    <input id='correo' name='correo' type='email' placeholder='Correo' value=''/>
                 </section>
                 <div>
                     <input style='margin-right:10%;' type='button' value='Volver' onclick="location.href='login.php'">
