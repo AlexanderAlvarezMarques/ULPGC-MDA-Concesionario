@@ -11,11 +11,13 @@ include("../partials/head.php");
   include("../partials/header.php");
   ?>
 
-  <section class="page-section">
+  <section id="page-section">
 
+
+  <!--
     <div class="container advertisements">
 
-      <!-- Card -->
+      <!-- Card --
       <div class="card">
         <img class="card-img-top" src="../Imagenes/Coches/Coche de inicio.jpg" alt="Card image cap">
         <div class="card-body">
@@ -25,7 +27,7 @@ include("../partials/head.php");
         </div>
       </div>
 
-      <!-- Card -->
+      <!-- Card --
       <div class="card">
         <img class="card-img-top" src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Card image cap">
         <div class="card-body">
@@ -35,7 +37,7 @@ include("../partials/head.php");
         </div>
       </div>
 
-      <!-- Card -->
+      <!-- Card --
       <div class="card">
         <img class="card-img-top" src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Card image cap">
         <div class="card-body">
@@ -45,7 +47,7 @@ include("../partials/head.php");
         </div>
       </div>
 
-      <!-- Card -->
+      <!-- Card --
       <div class="card">
         <img class="card-img-top" src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Card image cap">
         <div class="card-body">
@@ -55,7 +57,7 @@ include("../partials/head.php");
         </div>
       </div>
 
-      <!-- Card -->
+      <!-- Card --
       <div class="card">
         <img class="card-img-top" src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Card image cap">
         <div class="card-body">
@@ -67,7 +69,29 @@ include("../partials/head.php");
 
     </div>
 
+-->
+
   </section>
+
+  <script>
+
+    $parameters = {
+      "page": 0
+    }
+
+    $.ajax({
+
+      data: $parameters,
+      url: '../components/advertisements-display.php',
+      type: 'post',
+      success:
+        function (response) {
+          $("#page-section").html(response);
+        }
+
+    });
+
+  </script>
 
   <?php
   include("../partials/footer.php");
