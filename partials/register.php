@@ -22,6 +22,10 @@
                 alert('email no es válido');
                 resultado = false;
             }
+            if(!patron_dni.exec(dni)){
+                alert('DNI no valido');
+                resultado = false;
+            }
             
             if(resultado === true){
                 var datosRegistro = {
