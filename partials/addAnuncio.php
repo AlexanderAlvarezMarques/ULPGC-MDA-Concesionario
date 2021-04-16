@@ -4,21 +4,21 @@
             var cuenta = $('#nombre_anuncio').val();
             var descripcion = $('#descripcion_anuncio').val();
             var precio = $('#precio_anuncio').val();
-            var marca = $('#coche_anuncio').val();
+            var marca = $('#marca_anuncio').val();
             var modelo = $('#modelo_anuncio').val();
             var año = $('#año_vehiculo_anuncio').val();
             
             var datosRegistro = {
-                "nombre_anuncio" : cuenta,
-                "descripcion_anuncio" : descripcion,
-                "precio_anuncio" : precio,
-                "coche_anuncio" : marca,
-                "modelo_anuncio" : modelo,
-                "año_vehiculo_anuncio" : año,
+                "cuenta" : cuenta,
+                "descripcion" : descripcion,
+                "precio" : precio,
+                "marca" : marca,
+                "modelo" : modelo,
+                "año" : año,
             };
             
             $.ajax({
-                url: "../inicio.php",
+                url: "../add_anuncio.php",
                 type: "POST",
                 data: JSON.stringify(datosRegistro),
                 contentType: "application/json;charset=utf-8",

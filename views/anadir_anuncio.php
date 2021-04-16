@@ -24,7 +24,7 @@ include("../partials/head.php");
             <textarea id='descripcion_anuncio' name='descripcion_anuncio' type='text' placeholder='Descripcion' value='' rows="4"></textarea>
         </section>
         <section>
-            <input id='coche_anuncio' name='coche_anuncio' type='text' placeholder='Marca' value='' />
+            <input id='marca_anuncio' name='marca_anuncio' type='text' placeholder='Marca' value='' />
         </section>
         <section>
             <input id='modelo_anuncio' name='modelo_anuncio' type='text' placeholder='Modelo' value='' />
