@@ -5,16 +5,17 @@
 include("../partials/head.php");
 ?>
 
+<script src="../assets/js/advertisements.js"></script>
+
 <body>
 
   <?php
   include("../partials/header.php");
   ?>
 
-  <section id="page-section" class="page-section"></section>
+  <section id="page-section" class="page-section">  </section>
 
   <script>
-
     $parameters = {
       "page": 0
     }
@@ -24,13 +25,11 @@ include("../partials/head.php");
       data: $parameters,
       url: '../advertisements-display.php',
       type: 'post',
-      success:
-        function (response) {
-          $("#page-section").html(response);
-        }
+      success: function(response) {
+        $("#page-section").html(response);
+      }
 
     });
-
   </script>
 
   <?php

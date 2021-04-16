@@ -6,7 +6,7 @@ if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
 $anuncios = Advertisement::getAdvertisements();
-$numeroAnunciosPorPagina = 12;
+$numeroAnunciosPorPagina = 2;
 
 if ($anuncios == -1) {
   $html = "<p>Se ha producido un error al acceder a la base de datos</p>";
@@ -26,17 +26,18 @@ echo "<div class='container advertisements'>";
 
 // Check array length
 $position = $page * $numeroAnunciosPorPagina;
+$limit = $position + $numeroAnunciosPorPagina;
 
 if (count($anuncios) > $position) {
 
-  for (; $position < ($position + 12) && $position < count($anuncios); $position++) {
+  while ($position < $limit && $position < count($anuncios)) {
 
     $anuncio = $anuncios[$position];
 
     $id = $anuncio["idanuncios"];
     $nombre = $anuncio["nombre_anuncio"];
     $descripcion = $anuncio["descripcion_anuncio"];
-    $src = "data:image/jpeg;base64,".base64_encode( $anuncio['foto_anuncio'] ) .'"';
+    $src = "data:image/jpeg;base64," . base64_encode($anuncio['foto_anuncio']) . '"';
     $precio = $anuncio["precio_anuncio"];
     $precio_financiado = $anuncio["preciof_anuncio"];
     $marca = $anuncio["marca_anuncio"];
@@ -47,21 +48,21 @@ if (count($anuncios) > $position) {
 
     //<img src="data:image/jpeg;base64,'.base64_encode( $result['image'] ).'"/>
 
-  ?>
+?>
 
     <!-- Card -->
     <div class="card">
-        
-        <?php
-          echo '<img class="card-img-top" src="data:image/jpeg;base64,' . base64_encode($anuncio['foto_anuncio']) . '" alt="Card image cap">';
-        ?>
-      
+
+      <?php
+      echo '<img class="card-img-top" src="data:image/jpeg;base64,' . base64_encode($anuncio['foto_anuncio']) . '" alt="Card image cap">';
+      ?>
+
       <div class="card-body">
-        
+
         <h3 class="card-title text-center"><?php echo $nombre ?></h3>
-        
+
         <p class="card-text"><?php echo $descripcion ?></p>
-        
+
         <p><b>Precio:</b> <?php echo $precio ?></p>
 
         <p><b>Precio financiado:</b> <?php echo $precio_financiado ?></p>
@@ -78,10 +79,25 @@ if (count($anuncios) > $position) {
 
       </div>
     </div>
-  
-  <?php
+
+<?php
+    $position = $position + 1;
   }
 }
+
+echo '<div class="text-center" style="width: 100%;">';
+
+if ($page > 0) {
+  $page--;
+  echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary'>Prev</button>";
+}
+
+if ($position < count($anuncios)) {
+  $page++;
+  echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary ml-1'>Next</button>";
+}
+
+echo '</div>';
 
 
 echo "</div>";
