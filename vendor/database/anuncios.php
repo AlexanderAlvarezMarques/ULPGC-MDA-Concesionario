@@ -1,29 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-include_once("config.php");
-
-class Anuncios
-{
-
-  public static function getAnuncios()
-  {
-    
-    $anuncios = DB::executeSQL("SELECT * FROM anuncios");
-    
-    if ($anuncios === null) {
-      return null;
-    }
-
-    if (count($anuncios) == 0) {
-      return null;
-    }
-    
-    return $anuncios[0];
-  }
-
-}
-=======
 include_once ("config.php");
 class Anuncios {
     public static function getCars() {
@@ -44,4 +19,3 @@ class Anuncios {
 }
 
 ?>
->>>>>>> 455ca92d93267705f34b87662289596a94160a79
