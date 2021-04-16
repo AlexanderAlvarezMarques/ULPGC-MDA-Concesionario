@@ -12,7 +12,7 @@
         var patron = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
         var patron_num = /[0-9]+/;
 
-        if (cuenta.length === 0 && precio.length === 0 && marca.length === 0 && modelo.length === 0 && año.length === 0) {
+        if (cuenta.length === 0 || precio.length === 0 || marca.length === 0 || modelo.length === 0 || año.length === 0) {
             alert('Algún campo esta vacio');
             resultado = false;
         }
