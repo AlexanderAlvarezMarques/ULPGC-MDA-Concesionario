@@ -24,7 +24,5 @@ class Usuarios {
         $result = DB::executeSQL("INSERT INTO usuarios(idusuarios, nombre_usuario,dni_usuario,password_usuario, correo_usuario) VALUES (0,?,?,?,?)",[$cuenta, $dni, $clave, $email]);
         return $result === null ? false : true;
     }
-
 }
-
 ?>

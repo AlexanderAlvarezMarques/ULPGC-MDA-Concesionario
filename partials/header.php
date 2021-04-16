@@ -28,6 +28,9 @@
 				<li class="nav-item active px-lg-5">
 					<a class="nav-link text-uppercase text-expanded" href="nosotros.php">Nosotros</a>
 				</li>
+				<li class="nav-item active px-lg-7">
+					<a class="nav-link text-uppercase text-expanded" href="anadir_anuncio.php">Crear Anuncio</a>
+				</li>
 			</ul>
 		</div>
 	</div>

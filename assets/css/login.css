@@ -32,6 +32,20 @@
     background-color: rgba(0, 0, 0, 0.452);
 }
 
+#loginForm section textarea{
+    outline: 0;
+    border-width: 0 0 0 2px;
+    border-color: rgba(0, 0, 255, 0.493);
+    color:#ffffff;
+    width: 100%;
+    align-items: center; 
+    margin-right: 10px; 
+    margin-bottom: 20px; 
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.452);
+    resize: none;
+}
+
 #loginForm div{
     display:flex;
 }

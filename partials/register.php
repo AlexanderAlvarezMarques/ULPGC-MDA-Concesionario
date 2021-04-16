@@ -9,7 +9,7 @@
             
             var patron = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
             var patron_dni = /[0-9]{8}[A-Z]/;
-            if(dni.length === 0 && usuario.length === 0 && contra.length === 0 && confirmar.length === 0 && correo.length === 0){
+            if(dni.length === 0 || usuario.length === 0 || contra.length === 0 || confirmar.length === 0 || correo.length === 0){
                 alert('Algún campo esta vacio');
                 resultado = false;
             }
@@ -20,6 +20,10 @@
             }
             if(!patron.exec(correo)){
                 alert('email no es válido');
+                resultado = false;
+            }
+            if(!patron_dni.exec(dni)){
+                alert('DNI no valido');
                 resultado = false;
             }
             
