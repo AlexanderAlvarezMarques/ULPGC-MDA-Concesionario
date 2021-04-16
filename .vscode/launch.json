@@ -4,11 +4,17 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+      
+
         {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
+<<<<<<< HEAD
+            "url": "http://192.168.56.3/ULPGC-MDA-Concesionario/index.html",
+=======
             "url": "http://localhost/ULPGC-MDA-Concesionario/views/index.php",
+>>>>>>> 455ca92d93267705f34b87662289596a94160a79
             "webRoot": "${workspaceFolder}"
         }
     ]
