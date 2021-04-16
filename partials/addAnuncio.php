@@ -26,6 +26,10 @@
             alert('error en el año');
             resultado = false;
         }
+        if(foto.length === 0){
+            alert('No se ha subido la foto');
+            resultado = false;
+        }
 
         if (resultado === true) {
             var datosRegistro = {
