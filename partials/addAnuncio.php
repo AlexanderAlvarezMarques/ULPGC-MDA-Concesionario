@@ -16,12 +16,12 @@
             alert('Algún campo esta vacio');
             resultado = false;
         }
-
+        /*
         if (!patron_num.exec(precio)) {
             alert('error en el precio');
             resultado = false;
         }
-
+        */
         if (!patron_num.exec(año)) {
             alert('error en el año');
             resultado = false;
@@ -35,7 +35,7 @@
             var datosRegistro = {
                 "cuenta": cuenta,
                 "descripcion": descripcion,
-                "foto": foto,
+                "foto": <?php echo $_FILES['foto']['tmp_name']; ?>,
                 "precio": precio,
                 "marca": marca,
                 "modelo": modelo,

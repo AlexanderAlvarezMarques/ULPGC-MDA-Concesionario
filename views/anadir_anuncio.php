@@ -15,7 +15,7 @@ include("../partials/head.php");
     ?>
 
 
-    <form id='loginForm' class="my-4" name="addForm" method='post'>
+    <form id='loginForm' class="my-4" name="addForm" method='post' enctype="multipart/form-data"> 
         <label><img src='../Imagenes/AddForm/car-xxl.png' alt="Imagen de inicio" style="width: 125px; height: 125px;" /></label>
         <section>
             <input id='nombre_anuncio' name='nombre_anuncio' type='text' placeholder='Coche' value=''/>
@@ -40,7 +40,7 @@ include("../partials/head.php");
         </section>
         <div>
             <input style='margin-right:10%;' type='button' value='Volver' onclick="location.href='index.php'">
-            <input type='button' onclick='registrarCoche()' value='Registrar Coche' />
+            <input type='button' onclick='registrarCoche()' value='Registrar Coche' />  
         </div>
     </form>
 
