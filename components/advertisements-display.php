@@ -1,11 +1,11 @@
 <?php
 
-include_once "../vendor/database/anuncios.php";
+include_once '../vendor/database/advertisements.php';
 
 if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
-$anuncios = Anuncios::getAnuncios();
+$anuncios = Advertisement::getAdvertisements();
 $numeroAnunciosPorPagina = 12;
 
 echo "<p>Entrando a display.php</p>";

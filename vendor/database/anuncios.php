@@ -1,26 +1,24 @@
 <?php
 
-include_once "config.php";
+include_once("config.php");
 
-class Anuncios {
+class Anuncios
+{
 
-  public static function getAnuncios () {
-
-    $advertisements = DB::executeSQL("SELECT * FROM anuncios");
-
-    if ($advertisements === null) {
-      return -1;
+  public static function getAnuncios()
+  {
+    
+    $anuncios = DB::executeSQL("SELECT * FROM anuncios");
+    
+    if ($anuncios === null) {
+      return null;
     }
 
-    if (count($advertisements == 0)) {
-      return -2;
+    if (count($anuncios) == 0) {
+      return null;
     }
-
-    return $advertisements[0];
-
+    
+    return $anuncios[0];
   }
 
 }
-
-
-
