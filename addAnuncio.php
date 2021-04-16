@@ -14,7 +14,7 @@ if (isset($_POST['send'])) {
   $modelo = $_POST['modelo'];
   $precio = $_POST['precio'];
   $ano_vehiculo = $_POST['ano_vehiculo'];
-  $foto = $_FILES['imagen']['tmp_name'];
+  $foto = file_get_contents($_FILES['imagen']['tmp_name']);
 
   include_once "vendor/database/anuncios.php";
 
