@@ -3,6 +3,7 @@
             var resultado = true;
             var cuenta = $('#nombre_anuncio').val();
             var descripcion = $('#descripcion_anuncio').val();
+            var foto = $('#foto').val();
             var precio = $('#precio_anuncio').val();
             var marca = $('#marca_anuncio').val();
             var modelo = $('#modelo_anuncio').val();
@@ -11,6 +12,7 @@
             var datosRegistro = {
                 "cuenta" : cuenta,
                 "descripcion" : descripcion,
+                "foto" : foto,
                 "precio" : precio,
                 "marca" : marca,
                 "modelo" : modelo,

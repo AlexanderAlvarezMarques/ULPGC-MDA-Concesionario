@@ -35,6 +35,9 @@ include("../partials/head.php");
         <section>
             <input id='año_vehiculo_anuncio' name='año_vehiculo_anuncio' type='text' placeholder='Año' value='' />
         </section>
+        <section>
+            <input type="file" class="form-control" id="foto" name="foto" multiple>
+        </section>
         <div>
             <input style='margin-right:10%;' type='button' value='Volver' onclick="location.href='index.php'">
             <input type='button' onclick='registrarCoche()' value='Registrar Coche' />

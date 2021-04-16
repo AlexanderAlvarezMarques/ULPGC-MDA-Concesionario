@@ -8,7 +8,7 @@
         $datoscrudos = file_get_contents("php://input"); //Leemos los datos
         $datos = json_decode($datoscrudos);
         if (isset($datos)){
-            $resultado = Anuncios::addCar($datos->cuenta, $datos->descripcion, $datos->precio, $datos->marca,$datos->modelo,$datos->año);
+            $resultado = Anuncios::addCar($datos->cuenta, $datos->descripcion,$datos->foto, $datos->precio, $datos->marca,$datos->modelo,$datos->año);
             if ($resultado) {
                 $res->inserted = true;
                 $res->message = 'success';
