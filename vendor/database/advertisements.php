@@ -12,7 +12,7 @@ class Advertisement {
           return null;
         }
         
-        return $ads[0];
+        return $ads;
     }
 
 }

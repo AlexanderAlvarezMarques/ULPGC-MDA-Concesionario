@@ -1,5 +1,10 @@
 <?php
 
+include "vendor/database/advertisements.php";
+
+print_r(Advertisement::getAdvertisements());
+
+/*
 include "autoload.php";
 
 $host = getEnviroment("DB_HOST");
@@ -13,5 +18,6 @@ echo "Name: $name<br>";
 echo "Username: $username<br>";
 echo "Password: $password<br>";
 echo "Port: $port";
+*/
 
 ?>
