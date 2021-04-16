@@ -8,10 +8,10 @@ class Advertisement {
 
         $ads = DB::executeSQL("SELECT * FROM anuncios");
 
-        if ($ads === null) {
-            return null;
+        if (count($ads) == 0) {
+          return null;
         }
-
+        
         return $ads;
     }
 
