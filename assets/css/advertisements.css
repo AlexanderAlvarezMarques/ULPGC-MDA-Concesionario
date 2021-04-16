@@ -1,0 +1,41 @@
+.advertisements {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.advertisements .card {
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.advertisements .card .card-img-top {
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (min-width: 576px) {
+  
+  .advertisements .card {
+    width: 49%;
+    margin-bottom: 2rem;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  
+  .advertisements .card {
+    width: 39%;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  
+  .advertisements .card {
+    width: 24%;
+  }
+
+}

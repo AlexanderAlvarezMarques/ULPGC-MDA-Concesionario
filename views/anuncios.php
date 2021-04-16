@@ -11,112 +11,62 @@ include("../partials/head.php");
   include("../partials/header.php");
   ?>
 
-  <section class="page-section clearfix">
-    <div class="container">
-      <div class="row">
+  <section class="page-section">
 
-        <div class="col-md-4">
-          <div class="product-item">
-            <img src="../Imagenes/Coches/Coche de inicio.jpg" alt="Coche" class="card-img-top">
+    <div class="container advertisements">
 
-            <div class="down-content">
-              <h4>Large: Premium</h4>
-
-              <h6><small>from</small> $99 <small>per weekend</small></h6>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, aliquam!</p>
-
-              <small>
-                <strong title="passegengers"><i class="fa fa-user"></i> 5</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="luggages"><i class="fa fa-briefcase"></i> 4</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="doors"><i class="fa fa-sign-out"></i> 4</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="transmission"><i class="fa fa-cog"></i> A</strong>
-              </small>
-
-              <span>
-                <a href="#" data-toggle="modal" data-target="#exampleModal">Book Now</a>
-              </span>
-            </div>
-          </div>
+      <!-- Card -->
+      <div class="card">
+        <img class="card-img-top" src="../Imagenes/Coches/Coche de inicio.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <img src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Coche" class="card-img-top">
-
-            <div class="down-content">
-              <h4>Large: Premium</h4>
-
-              <h6><small>from</small> $99 <small>per weekend</small></h6>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, aliquam!</p>
-
-              <small>
-                <strong title="passegengers"><i class="fa fa-user"></i> 5</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="luggages"><i class="fa fa-briefcase"></i> 4</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="doors"><i class="fa fa-sign-out"></i> 4</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="transmission"><i class="fa fa-cog"></i> A</strong>
-              </small>
-
-              <span>
-                <a href="#" data-toggle="modal" data-target="#exampleModal">Book Now</a>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <img src="../Imagenes/Coches/Coche de inicio.jpg" alt="Coche" class="card-img-top">
-
-            <div class="down-content">
-              <h4>Large: Premium</h4>
-
-              <h6><small>from</small> $99 <small>per weekend</small></h6>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, aliquam!</p>
-
-              <small>
-                <strong title="passegengers"><i class="fa fa-user"></i> 5</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="luggages"><i class="fa fa-briefcase"></i> 4</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="doors"><i class="fa fa-sign-out"></i> 4</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="transmission"><i class="fa fa-cog"></i> A</strong>
-              </small>
-
-              <span>
-                <a href="#" data-toggle="modal" data-target="#exampleModal">Book Now</a>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <img src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Coche" class="card-img-top">
-
-            <div class="down-content">
-              <h4>Large: Premium</h4>
-
-              <h6><small>from</small> $99 <small>per weekend</small></h6>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, aliquam!</p>
-
-              <small>
-                <strong title="passegengers"><i class="fa fa-user"></i> 5</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="luggages"><i class="fa fa-briefcase"></i> 4</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="doors"><i class="fa fa-sign-out"></i> 4</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong title="transmission"><i class="fa fa-cog"></i> A</strong>
-              </small>
-
-              <span>
-                <a href="#" data-toggle="modal" data-target="#exampleModal">Book Now</a>
-              </span>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Card -->
+      <div class="card">
+        <img class="card-img-top" src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="card">
+        <img class="card-img-top" src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="card">
+        <img class="card-img-top" src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="card">
+        <img class="card-img-top" src="../Imagenes/Coches/prueba_imagen_anuncio.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
     </div>
+
   </section>
 
   <?php
