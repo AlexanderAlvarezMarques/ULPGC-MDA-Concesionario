@@ -15,7 +15,7 @@ include ("../partials/head.php");
   ?>
 
 
-  <form id='loginForm' class="my-4" name="loginForm" method='post'>
+  <form id='loginForm' class="my-4" name="loginForm" method='post' style="font-family: 'Arial';">
     <label><img src='../Imagenes/LoginForm/usuarioprin.png' alt="Imagen de inicio" style="width: 125px; height: 125px;"/></label>
     <section>
       <input id='cuenta' name='cuenta' type='text' placeholder='Usuario' value=''/>
