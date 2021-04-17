@@ -22,7 +22,7 @@ include("../partials/head.php");
       else if ($error == "true")
         $message = "Campo no válido";
       else
-        header("Location:http://mda.servidor.com/views/");
+        header("Location:http://localhost/ULPGC-MDA-Concesionario/views/");
 
     }
     ?>
