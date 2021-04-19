@@ -2,9 +2,8 @@
 
 include_once "vendor/database/anuncios.php";
 
-if((isset($_POST['id']))){
+if(isset($_POST['id'])){
   Anuncios::deleteAdvertisement($_POST['id']);
-  header("Location:views/index.php");
 } 
 
 if (!isset($_POST['page'])) $page = 0;
@@ -33,7 +32,7 @@ echo "<div class='container advertisements'>";
 $position = $page * $numeroAnunciosPorPagina;
 $limit = $position + $numeroAnunciosPorPagina;
 
-if (count($anuncios) > $position) {
+if ($anuncios !== null && count($anuncios) > $position) {
 
   while ($position < $limit && $position < count($anuncios)) {
 
@@ -110,3 +109,5 @@ echo '</div>';
 
 
 echo "</div>";
+
+?>

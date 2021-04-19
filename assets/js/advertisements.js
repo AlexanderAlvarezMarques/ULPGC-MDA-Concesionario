@@ -17,12 +17,17 @@ function loadAdvertisements(page) {
 
 function deleteAdvertisement(id) {
   $parameters = {
-    "id" : id
+    "id": id
   }
 
   $.ajax({
+
     data: $parameters,
     url: '../advertisements-display.php',
-    type: 'post'
+    type: 'post',
+    success:
+      function (response) {
+        $("#page-section").html(response);
+      }
   });
 }
