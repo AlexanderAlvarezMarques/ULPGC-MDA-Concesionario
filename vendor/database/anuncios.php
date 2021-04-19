@@ -11,16 +11,18 @@ class Anuncios {
 
     //Eliminar anuncio 
     public static function deleteAdvertisement($idAnuncio){
-        $result = DB::executeSQL("DELETE FROM anuncios WHERE id = ?",[$idAnuncio]);
+        $result = DB::executeSQL("DELETE FROM anuncios WHERE idanuncios = ?",[$idAnuncio]);
         return $result === null ? false : true;
     }
 
     //Coger anuncios
     public static function getAdvertisements() {
         $ads = DB::executeSQL("SELECT * FROM anuncios");
-        if (count($ads) == 0) {
-          return null;
-        }
+        
+        if ($ads === null) return null;
+
+        if (count($ads) == 0) return null;
+
         return $ads;
     }
     
