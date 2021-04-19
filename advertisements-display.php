@@ -100,7 +100,7 @@ if ($page > 0) {
   echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary'>Prev</button>";
 }
 
-if ($position < count($anuncios)) {
+if ($anuncios !== null && $position < count($anuncios)) {
   $page++;
   echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary ml-1'>Next</button>";
 }
