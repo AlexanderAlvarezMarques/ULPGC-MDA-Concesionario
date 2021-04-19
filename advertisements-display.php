@@ -1,11 +1,16 @@
 <?php
 
-include_once "vendor/database/advertisements.php";
+include_once "vendor/database/anuncios.php";
+
+if((isset($_POST['id']))){
+  Anuncios::deleteAdvertisement($_POST['id']);
+  header("Location:views/index.php");
+} 
 
 if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
-$anuncios = Advertisement::getAdvertisements();
+$anuncios = Anuncios::getAdvertisements();
 $numeroAnunciosPorPagina = 5;
 
 if ($anuncios == -1) {
@@ -57,6 +62,10 @@ if (count($anuncios) > $position) {
       echo '<img class="card-img-top" src="data:image/jpeg;base64,' . base64_encode($anuncio['foto_anuncio']) . '" alt="Card image cap">';
       ?>
 
+      <header>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      </header>
+
       <div class="card-body">
 
         <h3 class="card-title text-center"><?php echo $nombre ?></h3>
@@ -76,7 +85,7 @@ if (count($anuncios) > $position) {
         <p><b>Localidad:</b> <?php echo $localidad ?></p>
 
         <a href="#" class="btn btn-primary">Go somewhere</a>
-
+          <button id='boton' class='material-icons' onclick='deleteAdvertisement(<?php echo $id?> )' >delete</button>
       </div>
     </div>
 

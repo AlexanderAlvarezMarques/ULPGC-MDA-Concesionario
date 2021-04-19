@@ -18,7 +18,7 @@ if (isset($_POST['send'])) {
 
   include_once "vendor/database/anuncios.php";
 
-  $result = Anuncios::addCar($nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano_vehiculo);
+  $result = Anuncios::addAdvertisement($nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano_vehiculo);
 
   if ($result !== null) {
     header('Location:http://localhost/ULPGC-MDA-Concesionario/views/anadir_anuncio.php?error=false');

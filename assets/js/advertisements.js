@@ -12,6 +12,17 @@ function loadAdvertisements(page) {
       function (response) {
         $("#page-section").html(response);
       }
+  });
+}
 
+function deleteAdvertisement(id) {
+  $parameters = {
+    "id" : id
+  }
+
+  $.ajax({
+    data: $parameters,
+    url: '../advertisements-display.php',
+    type: 'post'
   });
 }
