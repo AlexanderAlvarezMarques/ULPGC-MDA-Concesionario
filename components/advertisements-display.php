@@ -10,7 +10,7 @@ if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
 $anuncios = Anuncios::getAdvertisements();
-$numeroAnunciosPorPagina = 3;
+$numeroAnunciosPorPagina = 10;
 
 if ($anuncios == -1) {
   $html = "<p>Se ha producido un error al acceder a la base de datos</p>";
@@ -85,6 +85,7 @@ if ($anuncios !== null && count($anuncios) > $position) {
 
         <a href="#" class="btn btn-primary">Go somewhere</a>
           <button id='boton' class='material-icons' onclick='deleteAdvertisement(<?php echo $id?> )' >delete</button>
+          <a href="../views/modified_anuncio.php?id=<?php echo $id ?>" ><button id='boton' class='material-icons'>modify</button></a>
       </div>
     </div>
 

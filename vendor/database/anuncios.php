@@ -25,7 +25,26 @@ class Anuncios {
 
         return $ads;
     }
+
+    //Coger un anuncio
+    public static function getAdvertisement($idAnuncio) {
+        $ads = DB::executeSQL("SELECT * FROM anuncios WHERE idanuncios = ?",[$idAnuncio] );
+        
+        if ($ads === null) return null;
+
+        if (count($ads) == 0) return null;
+
+        return $ads;
+    }
     
+    //Update anuncio
+    public static function updateAdvertisement($id, $nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano){
+
+        $result = DB::executeSQL("UPDATE anuncios SET idanuncio, nombre_anuncio, descripcion_anuncio, foto_anuncio, precio_anuncio, marca_anuncio, modelo_anuncio, ano_vehiculo",[$id, $nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano]);
+
+        return $result === null ? false : true;
+
+    }
 
 }
 
