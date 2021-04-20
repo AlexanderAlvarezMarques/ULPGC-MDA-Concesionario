@@ -10,7 +10,7 @@ if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
 $anuncios = Anuncios::getAdvertisements();
-$numeroAnunciosPorPagina = 5;
+$numeroAnunciosPorPagina = 3;
 
 if ($anuncios == -1) {
   $html = "<p>Se ha producido un error al acceder a la base de datos</p>";

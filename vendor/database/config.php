@@ -23,8 +23,8 @@ class DB {
             //$port = 3306;
 
             self::$conn = new PDO("mysql:host=$host;dbname=$name", $username, $password);
-            self::$conn->exec('PRAGMA foreign_keys = ON;');
-            self::$conn->exec('PRAGMA encoding="UTF-8";');
+            //self::$conn->exec('PRAGMA foreign_keys = ON;');
+            //self::$conn->exec('PRAGMA encoding="UTF-8";');
             self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         }
