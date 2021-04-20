@@ -1,6 +1,6 @@
 <?php
 
-include_once "vendor/database/anuncios.php";
+include_once __DIR__ . "/../vendor/database/anuncios.php";
 
 if(isset($_POST['id'])){
   Anuncios::deleteAdvertisement($_POST['id']);

@@ -1,6 +1,6 @@
 <?php
 
-include (dirname(__DIR__).'../../autoload.php');
+include __DIR__ . '/../../autoload.php';
 
 class DB {
 

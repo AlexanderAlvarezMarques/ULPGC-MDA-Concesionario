@@ -23,7 +23,7 @@ include("../partials/head.php");
     $.ajax({
 
       data: $parameters,
-      url: '../advertisements-display.php',
+      url: '../components/advertisements-display.php',
       type: 'post',
       success: function(response) {
         $("#page-section").html(response);
