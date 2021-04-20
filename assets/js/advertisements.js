@@ -23,7 +23,7 @@ function deleteAdvertisement(id) {
   $.ajax({
 
     data: $parameters,
-    url: '../advertisements-display.php',
+    url: '../components/advertisements-display.php',
     type: 'post',
     success:
       function (response) {
