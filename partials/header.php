@@ -11,24 +11,22 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav mx-auto">
-				<li class="nav-item active px-lg-5">
-					<a class="nav-link text-uppercase text-expanded" href="index.php">Home
-						<span class="sr-only">(current)</span>
-					</a>
+				<li class="nav-item active" style="padding-right:5em">
+					<a class="nav-link text-uppercase text-expanded" href="index.php">Home</a>
 				</li>
-				<li class="nav-item active px-lg-5">
+				<li class="nav-item active" style="padding-right:5em">
 					<a class="nav-link text-uppercase text-expanded" href="login.php">Login</a>
 				</li>
-				<li class="nav-item active px-lg-5">
+				<li class="nav-item active" style="padding-right:5em">
 					<a class="nav-link text-uppercase text-expanded" href="novedades.php">Novedades</a>
 				</li>
-				<li class="nav-item active px-lg-5">
+				<li class="nav-item active" style="padding-right:5em">
 					<a class="nav-link text-uppercase text-expanded" href="anuncios.php">Anuncios</a>
 				</li>
-				<li class="nav-item active px-lg-5">
+				<li class="nav-item active" style="padding-right:5em">
 					<a class="nav-link text-uppercase text-expanded" href="nosotros.php">Nosotros</a>
 				</li>
-				<li class="nav-item active px-lg-7">
+				<li class="nav-item active">
 					<a class="nav-link text-uppercase text-expanded" href="anadir_anuncio.php">Crear Anuncio</a>
 				</li>
 			</ul>
