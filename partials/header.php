@@ -43,7 +43,7 @@ include ("../partials/login.php");
 					</li>
 
 					<li class="nav-item active">
-						<a class="nav-link text-uppercase text-expanded" href="index.php?logout=t" action>Cerrar sesión</a>
+						<a class="nav-link text-uppercase text-expanded" href="index.php?logout=t" style="color: #7a5151">Cerrar sesión</a>
 					</li>
 				<?php endif; ?>
 			</ul>
