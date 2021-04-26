@@ -84,6 +84,8 @@ if ($anuncios !== null && count($anuncios) > $position) {
         <div class="fav-icon">
           <img src="../Imagenes/icons/heart_icon_empty.png" alt="" style="object-fit: contain;  width: 25px; height: 25px;">
         </div>
+        <button id='boton' class='material-icons' onclick='deleteAdvertisement(<?php echo $id?> )' >delete</button>
+        <a href="../views/modified_anuncio.php?id=<?php echo $id ?>" ><button id='boton' class='material-icons'>modify</button></a>
       </div>
     </div>
 
