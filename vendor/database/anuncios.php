@@ -27,6 +27,7 @@ class Anuncios {
     }
 
     //Coger un anuncio
+		
     public static function getAdvertisement($idAnuncio) {
         $ads = DB::executeSQL("SELECT * FROM anuncios WHERE idanuncios = ?",[$idAnuncio] );
         
