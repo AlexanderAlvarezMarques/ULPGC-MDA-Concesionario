@@ -1,12 +1,16 @@
 <?php
 
-include_once "vendor/database/advertisements.php";
+include_once __DIR__ . "/../vendor/database/anuncios.php";
+
+if(isset($_POST['id'])){
+  Anuncios::deleteAdvertisement($_POST['id']);
+} 
 
 if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
-$anuncios = Advertisement::getAdvertisements();
-$numeroAnunciosPorPagina = 2;
+$anuncios = Anuncios::getAdvertisements();
+$numeroAnunciosPorPagina = 10;
 
 if ($anuncios == -1) {
   $html = "<p>Se ha producido un error al acceder a la base de datos</p>";
@@ -28,7 +32,7 @@ echo "<div class='container advertisements'>";
 $position = $page * $numeroAnunciosPorPagina;
 $limit = $position + $numeroAnunciosPorPagina;
 
-if (count($anuncios) > $position) {
+if ($anuncios !== null && count($anuncios) > $position) {
 
   while ($position < $limit && $position < count($anuncios)) {
 
@@ -57,6 +61,10 @@ if (count($anuncios) > $position) {
       echo '<img class="card-img-top" src="data:image/jpeg;base64,' . base64_encode($anuncio['foto_anuncio']) . '" alt="Card image cap">';
       ?>
 
+      <header>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      </header>
+
       <div class="card-body">
 
         <h3 class="card-title text-center"><?php echo $nombre ?></h3>
@@ -76,12 +84,13 @@ if (count($anuncios) > $position) {
         <p><b>Localidad:</b> <?php echo $localidad ?></p>
 
         <a href="#" class="btn btn-primary">Go somewhere</a>
-
+          <button id='boton' class='material-icons' onclick='deleteAdvertisement(<?php echo $id?> )' >delete</button>
+          <a href="../views/modified_anuncio.php?id=<?php echo $id ?>" ><button id='boton' class='material-icons'>modify</button></a>
       </div>
     </div>
 
 <?php
-    $position = $position + 1;
+    $position++;
   }
 }
 
@@ -92,7 +101,7 @@ if ($page > 0) {
   echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary'>Prev</button>";
 }
 
-if ($position < count($anuncios)) {
+if ($anuncios !== null && $position < count($anuncios)) {
   $page++;
   echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary ml-1'>Next</button>";
 }
@@ -101,3 +110,5 @@ echo '</div>';
 
 
 echo "</div>";
+
+?>
