@@ -5,13 +5,19 @@
 	include ("../partials/head.php");
 ?>
 
+<?php 
+  if (isset($_GET['logout'])): 
+    $_SESSION['loggedin']=false;
+  endif;
+?>
+
 <body>
 
 <?php
 	include ("../partials/header.php");
 ?>
 
-<section class="page-section clearfix">
+  <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="../Imagenes/Coches/Coche de inicio.jpg" alt="">

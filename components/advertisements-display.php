@@ -10,7 +10,7 @@ if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
 $anuncios = Anuncios::getAdvertisements();
-$numeroAnunciosPorPagina = 3;
+$numeroAnunciosPorPagina = 10;
 
 if ($anuncios == -1) {
   $html = "<p>Se ha producido un error al acceder a la base de datos</p>";
@@ -55,36 +55,35 @@ if ($anuncios !== null && count($anuncios) > $position) {
 ?>
 
     <!-- Card -->
-    <div class="card">
-
+    <div style="width: 700px;
+    border-radius: 10px;
+    margin: 0em auto 2em;
+    display: flex;
+    flex-direction: row;
+    background-color: #b9b9b9;">
       <?php
-      echo '<img class="card-img-top" src="data:image/jpeg;base64,' . base64_encode($anuncio['foto_anuncio']) . '" alt="Card image cap">';
+      echo '<img class="card-img-top" src="data:image/jpeg;base64,' . base64_encode($anuncio['foto_anuncio']) . '" alt="Card image cap" style ="width:250px;
+      height:200px;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      object-fit: cover;">';
       ?>
-
-      <header>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      </header>
-
-      <div class="card-body">
-
-        <h3 class="card-title text-center"><?php echo $nombre ?></h3>
-
-        <p class="card-text"><?php echo $descripcion ?></p>
-
-        <p><b>Precio:</b> <?php echo $precio ?></p>
-
-        <p><b>Precio financiado:</b> <?php echo $precio_financiado ?></p>
-
-        <p><b>Marca:</b> <?php echo $marca ?></p>
-
-        <p><b>Modelo:</b> <?php echo $modelo ?></p>
-
-        <p><b>Año:</b> <?php echo $ano ?></p>
-
-        <p><b>Localidad:</b> <?php echo $localidad ?></p>
-
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-          <button id='boton' class='material-icons' onclick='deleteAdvertisement(<?php echo $id?> )' >delete</button>
+      <div style="padding: 15px;">
+        <!-- Cambiar por variables -->
+        <h3><?php echo $marca ?> <?php echo $modelo ?></h3>
+        <h5 style="color: #474747;"><?php echo $ano ?></h5>
+        <h6 style="color: #474747;"><?php echo $localidad ?></h6>
+        <div style="float: left; font-family: Helvetica; padding: 10px 0 -10px 0;">
+          <h7>Precio financiado</h7>
+          <h2 style="color: #c00000; font-family: Helvetica;"><?php echo $precio_financiado ?>€</h2>
+        </div>
+        <div style="float: right; padding: 10px 0 -10px 0; margin-left:50px">
+            <h7 style= "font-family: Helvetica;">Precio al contado</h7>
+            <h2 style=" font-family: Helvetica;"><?php echo $precio ?>€</h2></div>
+          </div>
+        <div class="fav-icon">
+          <img src="../Imagenes/icons/heart_icon_empty.png" alt="" style="object-fit: contain;  width: 25px; height: 25px;">
+        </div>
       </div>
     </div>
 

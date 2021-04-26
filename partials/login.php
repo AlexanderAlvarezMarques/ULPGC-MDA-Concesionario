@@ -17,8 +17,8 @@
                 dataType: "json",
                 success: function(res) {
                     alert(res.message);
-                    if (res.inserted === true){
-                        window.location.href = "../views/index.php";
+                    if (!res.inserted){
+                        window.location.href = "../views/login.php";
                     }
                 },
                 error: function(res) {

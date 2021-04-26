@@ -15,7 +15,7 @@ include ("../partials/head.php");
   ?>
 
 
-  <form id='loginForm' class="my-4" name="loginForm" method='post' style="font-family: 'Arial';">
+  <form id='loginForm' class="my-4" action="index.php" name="loginForm" method='post' style="font-family: 'Arial';">
     <label><img src='../Imagenes/LoginForm/usuarioprin.png' alt="Imagen de inicio" style="width: 125px; height: 125px;"/></label>
     <section>
       <input id='cuenta' name='cuenta' type='text' placeholder='Usuario' value=''/>
@@ -24,7 +24,7 @@ include ("../partials/head.php");
       <input id='clave' name='clave' type='password' placeholder='Contraseña' value=''/>
     </section>
     <div>
-      <input style='margin-right:10%;' type='button' onclick='iniciarsesion()' value='Iniciar sesión'/>
+      <input style='margin-right:10%;' type='submit' onclick='iniciarsesion()' value='Iniciar sesión'/>
       <input type='button' value='Registrarse' onclick="location.href='registro.php'">
     </div>
   </form>
