@@ -90,7 +90,7 @@ if ($anuncios !== null && count($anuncios) > $position) {
     </div>
 
 <?php
-    $position++;
+    $position = $position + 1;
   }
 }
 
