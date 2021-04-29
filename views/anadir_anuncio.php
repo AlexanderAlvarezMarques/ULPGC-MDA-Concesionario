@@ -6,8 +6,6 @@ include("../addAnuncio.php");
 include("../partials/head.php");
 ?>
 
-<link href="../assets/css/login.css" rel="stylesheet" type="text/css">
-
 <body>
 
     <?php

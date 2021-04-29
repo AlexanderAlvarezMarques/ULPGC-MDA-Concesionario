@@ -1,7 +1,3 @@
-<?php
-include ("../partials/login.php");
-?>
-
 <h1 class="site-heading text-center text-white d-none d-lg-block">
 	<a class="nav-link" href="index.php"><span class="site-heading-lower">AILA Motors</span></a>
 </h1>
@@ -28,16 +24,18 @@ include ("../partials/login.php");
 					<a class="nav-link text-uppercase text-expanded" href="nosotros.php">Nosotros</a>
 				</li>
 
-				<?php if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']): ?>
-					<?php $_SESSION['loggedin']=false; ?>
+				<?php
+					if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {
+					$_SESSION['loggedin']=false;
+				?>
 
 					<li class="nav-item active" style="padding-right:5em">
 						<a class="nav-link text-uppercase text-expanded" href="login.php">Login</a>
 					</li>
 
-				<?php endif; ?>
+				<?php } ?>
 
-				<?php if ($_SESSION['loggedin']): ?>
+				<?php if ($_SESSION['loggedin']) {?>
 					<li class="nav-item active" style="padding-right:5em">
 						<a class="nav-link text-uppercase text-expanded" href="anadir_anuncio.php">Crear Anuncio</a>
 					</li>
@@ -45,7 +43,7 @@ include ("../partials/login.php");
 					<li class="nav-item active">
 						<a class="nav-link text-uppercase text-expanded" href="index.php?logout=t" style="color: #7a5151">Cerrar sesión</a>
 					</li>
-				<?php endif; ?>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>

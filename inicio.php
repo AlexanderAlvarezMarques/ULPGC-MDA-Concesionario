@@ -9,7 +9,7 @@
         if (isset($datos)){
             $resultado = Usuarios::ckeckUserExist($datos->usuario,$datos->password);
             if ($resultado){
-				$_SESSION['loggedin']=true;
+								$_SESSION['loggedin']=true;
                 $res->message = 'Bienvenido/a';
             } else {
                 $_SESSION['loggedin']=false;
@@ -23,6 +23,4 @@
         $res->inserted = false;
         $res->message = 'Se ha producido una excepción en el servidor: '.$e->getMessage(); 
     }
-    header('Content-type: application/json');
-    echo json_encode($res);
 ?>
