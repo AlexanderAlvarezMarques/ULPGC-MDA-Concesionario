@@ -2,11 +2,8 @@
 <html lang="es">
 
 <?php
-include("../addAnuncio.php");
 include("../partials/head.php");
 ?>
-
-<link href="../assets/css/login.css" rel="stylesheet" type="text/css">
 
 <body>
 
@@ -22,7 +19,7 @@ include("../partials/head.php");
       else if ($error == "true")
         $message = "Campo no válido";
       else
-        header("Location:http://localhost/ULPGC-MDA-Concesionario/views/");
+        header("Location:/views/anuncios.php");
 
     }
     ?>

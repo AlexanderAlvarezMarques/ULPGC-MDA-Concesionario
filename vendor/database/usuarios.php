@@ -1,6 +1,9 @@
 <?php
-include_once ("config.php");
+
+include_once 'config.php';
+
 class Usuarios {
+
     public static function getUsers() {
         $users = DB::executeSQL("SELECT * FROM usuarios");
         if ($users === null) {
@@ -24,5 +27,7 @@ class Usuarios {
         $result = DB::executeSQL("INSERT INTO usuarios(idusuarios, nombre_usuario,dni_usuario,password_usuario, correo_usuario) VALUES (0,?,?,?,?)",[$cuenta, $dni, $clave, $email]);
         return $result === null ? false : true;
     }
+		
 }
+
 ?>

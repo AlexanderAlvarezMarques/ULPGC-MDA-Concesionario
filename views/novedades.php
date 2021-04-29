@@ -5,7 +5,8 @@
 include("../partials/head.php");
 ?>
 
-<script src="../assets/js/advertisements.js"></script>
+
+<script src="../assets/js/offers.js"></script>
 
 <body>
 

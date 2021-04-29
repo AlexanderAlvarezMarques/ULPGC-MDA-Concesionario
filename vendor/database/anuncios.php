@@ -34,8 +34,24 @@ class Anuncios {
     }
 
     //Modificar anuncio
-    public static function updateAdvertisement($nombre, $descripcion, $foto, $precio, $marca, $ano){
-        $result = DB::executeSQL("UPDATE anuncios SET nombre_anuncio=?, descripcion_anuncio=?, foto_anuncio=?, precio_anuncio=?, marca_anuncio=?, ano_vehiculo=?",[$nombre, $descripcion, $foto, $precio, $marca, $ano]);
+    public static function updateAdvertisement($id, $nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano){
+      $SQL = "UPDATE anuncios
+			
+			SET
+			nombre_anuncio=?,
+			descripcion_anuncio=?,
+			foto_anuncio=?,
+			precio_anuncio=?,
+			marca_anuncio=?,
+			modelo_anuncio=?,
+			ano_vehiculo_anuncio=?
+
+			WHERE idanuncios=?
+			";
+			
+			$params = [$nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano, $id];
+
+			$result = DB::executeSQL($SQL, $params);
         return $result === null ? false : true;
     }   
 }

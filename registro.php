@@ -10,6 +10,8 @@
         if (isset($datos)){
             $resultado = Usuarios::addUser($datos->usuario, $datos->dni, $datos->password, $datos->correo);
             if ($resultado) {
+								session_start();
+								$_SESSION['loggedin'] = true;
                 $res->inserted = true;
                 $res->message = 'success';
             }

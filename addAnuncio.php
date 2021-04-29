@@ -4,7 +4,7 @@ if (isset($_POST['send'])) {
 
   # Colocar condicionales de ningun campo vacio así como comprobaciones de patrones
   if ($_POST['nombre'] == "") {
-    header('Location:http://localhost/ULPGC-MDA-Concesionario/views/anadir_anuncio.php?error=true');
+    header('Location:/views/anadir_anuncio.php?error=true');
   }
 
 
@@ -21,9 +21,9 @@ if (isset($_POST['send'])) {
   $result = Anuncios::addAdvertisement($nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano_vehiculo);
 
   if ($result !== null) {
-    header('Location:http://localhost/ULPGC-MDA-Concesionario/views/anadir_anuncio.php?error=false');
+    header('Location:/views/anadir_anuncio.php?error=false');
   } else {
-    header('Location:http://localhost/ULPGC-MDA-Concesionario/views/anadir_anuncio.php?error=null');
+    header('Location:/views/anadir_anuncio.php?error=null');
   }
 
 
