@@ -23,4 +23,6 @@
         $res->inserted = false;
         $res->message = 'Se ha producido una excepción en el servidor: '.$e->getMessage(); 
     }
+		header('Content-type: application/json');
+    echo json_encode($res);
 ?>

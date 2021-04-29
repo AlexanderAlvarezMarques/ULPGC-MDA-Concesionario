@@ -16,7 +16,7 @@ function iniciarsesion(event) {
 			dataType: "json",
 			success: function(res) {
 					alert(res.message);
-					window.location.href = "index.html";
+					window.location.href = "/views/index.php";
 			},
 			error: function(res) {
 					var json_string = JSON.stringify(res);
