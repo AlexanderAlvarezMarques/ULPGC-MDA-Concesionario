@@ -2,7 +2,6 @@
 <html lang="es">
 
 <?php
-include("../addAnuncio.php");
 include("../partials/head.php");
 ?>
 
