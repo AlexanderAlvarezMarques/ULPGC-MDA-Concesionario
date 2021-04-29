@@ -5,8 +5,6 @@
 include ("../partials/head.php");
 ?>
 
-<link href="../assets/css/about.css" rel="stylesheet" type="text/css">
-
 <body>
 	
   <?php

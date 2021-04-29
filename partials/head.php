@@ -16,6 +16,7 @@
   <link href="../assets/css/business-casual.css" rel="stylesheet">
   <link href="../assets/css/advertisements.css" rel="stylesheet">
 	<link href="../assets/css/login.css" rel="stylesheet">
+	<link href="../assets/css/about.css" rel="stylesheet" type="text/css">
 
 	<!-- Custom JS for this template -->
 	<script src="../assets/js/advertisements.js"></script>
