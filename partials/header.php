@@ -41,7 +41,7 @@
 					</li>
 
 					<li class="nav-item active">
-						<a class="nav-link text-uppercase text-expanded" href="index.php?logout=t" style="color: #7a5151">Cerrar sesión</a>
+						<a class="nav-link text-uppercase text-expanded" href="logout.php" style="color: #7a5151">Cerrar sesión</a>
 					</li>
 				<?php } ?>
 			</ul>

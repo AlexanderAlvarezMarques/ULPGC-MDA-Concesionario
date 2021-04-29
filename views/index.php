@@ -2,13 +2,21 @@
 <html lang="es">
 
 <?php
-	include ("../partials/head.php");
-?>
+	
+	if (isset($_SESSION['loggedin'])) {
+		
+		echo "<h1 style='color: white;'>DEBUG 1</h1>";
 
-<?php 
-  if (isset($_GET['logout'])): 
-    $_SESSION['loggedin']=false;
-  endif;
+		if ($_SESSION['loggedin']) {
+
+			echo "<h1 style='color: white;'>DEBUG 2</h1>";
+
+		}
+
+	}
+
+
+	include ("../partials/head.php");
 ?>
 
 <body>

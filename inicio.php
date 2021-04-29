@@ -9,10 +9,10 @@
         if (isset($datos)){
             $resultado = Usuarios::ckeckUserExist($datos->usuario,$datos->password);
             if ($resultado){
-								$_SESSION['loggedin']=true;
+								session_start();
+								$_SESSION['loggedin'] = true;
                 $res->message = 'Bienvenido/a';
             } else {
-                $_SESSION['loggedin']=false;
                 $res->inserted = false;
                 $res->message = 'Usuario o contraseña incorrectos.';
             }
