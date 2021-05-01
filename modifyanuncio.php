@@ -21,8 +21,8 @@ if (isset($_POST['send'])) {
   $result = Anuncios::updateAdvertisement($id,$nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano_vehiculo);
 
   if ($result) {
-    header('Location:/views/anuncios.php');
+    header('Location:ULPGC-MDA-Concesionario/views/anuncios.php');
   } else {
-    header("Location:/views/modified_anuncio.php?id=$id");
+    header("Location:ULPGC-MDA-Concesionario/views/modified_anuncio.php?id=$id");
   }
 }
