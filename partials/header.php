@@ -39,7 +39,12 @@
 					<li class="nav-item active" style="padding-right:5em">
 						<a class="nav-link text-uppercase text-expanded" href="anadir_anuncio.php">Crear Anuncio</a>
 					</li>
-
+					<li class="nav-item active" style="padding-right:5em">
+						<a class="nav-link text-uppercase text-expanded" href="anadir_anuncio.php">Componentes</a>
+					</li>
+					<li class="nav-item active" style="padding-right:5em;">
+						<label><i class="material-icons" style="font-size:36px;color:white;">shopping_cart</i></label>
+					</li>
 					<li class="nav-item active">
 						<a class="nav-link text-uppercase text-expanded" href="logout.php" style="color: #7a5151">Cerrar sesión</a>
 					</li>

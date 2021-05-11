@@ -80,7 +80,9 @@ if ($anuncios !== null && count($anuncios) > $position) {
 
 					<div class="group">
 					<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary">Modificar</button></a>
-						<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
+					<a href="../views/add_component.php?id=<?php echo $id ?>"><button class="btn btn-warning mt-1">Comprar</button></a>
+					<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
+					
 					</div>
 
 				</div>
