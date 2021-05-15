@@ -44,18 +44,17 @@ include ("../partials/head.php");
 				</select>
 
 				<select name="expiration_date" id="expiration_date">
-					<option value="1">2021</option>
-					<option value="2">2022</option>
-					<option value="3">2023</option>
-					<option value="4">2024</option>
-					<option value="5">2025</option>
-					<option value="6">2026</option>
-					<option value="7">2027</option>
-					<option value="8">2028</option>
-					<option value="9">2029</option>
-					<option value="10">2030</option>
-					<option value="11">2031</option>
-					<option value="12">2032</option>
+
+					<?php
+
+						$year = date("Y");
+
+						for ($i = 0; $i < 20; $i++) {
+							echo "<option value='" . ($year + $i) . "'>" . ($year + $i) . "</option>";
+						}
+
+					?>
+
 				</select>
 
 			</div>
@@ -70,8 +69,8 @@ include ("../partials/head.php");
 				<b>12000€</b>
 			</div>
 
-			<div class="form-group size">
-				<input type="submit" class="btn btn-primary" value="Comprar">
+			<div class="form-group size text-center">
+				<input type="submit" class="btn btn-primary mt-4" value="Comprar">
 			</div>
 		
 		</form>
