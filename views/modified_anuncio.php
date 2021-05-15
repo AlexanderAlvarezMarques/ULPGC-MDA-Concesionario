@@ -21,12 +21,12 @@ if (isset($_POST['mod'])) {
 
     $res = Anuncios::updateAdvertisement($id,$nombre,$descripcion,$src,$precio,$marca,$modelo,$ano);
     if ($res){
-        header("Location:http://localhost/ULPGC-MDA-Concesionario/views/anuncios.php");
+        header("Location:/views/anuncios.php");
     }
 }
 
 if (!isset($_GET['id'])) {
-    header("Location:http://localhost/ULPGC-MDA-Concesionario/views/anuncios.php");
+    header("Location:/views/anuncios.php");
 }
 
 $anuncio = Anuncios::getAdvertisement($_GET['id']);
@@ -61,7 +61,7 @@ $positiondusuario = $anuncio[0]["idusuario"];
         else if ($error == "true")
             $message = "Campo no válido";
         else
-            header("Location:http://localhost/ULPGC-MDA-Concesionario/views/");
+            header("Location:/views/");
     }
     ?>
 

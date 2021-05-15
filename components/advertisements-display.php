@@ -2,6 +2,8 @@
 
 include_once __DIR__ . "/../vendor/database/anuncios.php";
 
+session_start();
+
 if (isset($_POST['id'])) {
 	Anuncios::deleteAdvertisement($_POST['id']);
 }
@@ -44,7 +46,7 @@ if ($anuncios !== null && count($anuncios) > $position) {
 		$src = "data:image/jpeg;base64," . base64_encode($anuncio['foto_anuncio']) . '"';
 		$precio = $anuncio["precio_anuncio"];
 		//$precio_financiado = $anuncio["preciof_anuncio"];
-		$precio_financiado = $precio*1.12;
+		$precio_financiado = $precio*0.85;
 		$marca = $anuncio["marca_anuncio"];
 		$modelo = $anuncio["modelo_anuncio"];
 		$localidad = $anuncio["localidad_anuncio"];
@@ -78,17 +80,21 @@ if ($anuncios !== null && count($anuncios) > $position) {
 						<h2><?php echo $precio ?> €</h2>
 					</div>
 
-					<div class="group">
-					<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary">Modificar</button></a>
-						<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
-					</div>
+					<?php if($_SESSION['loggedin']) {?>
+						<div class="group">
+						<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary">Modificar</button></a>
+							<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
+						</div>
+					<?php } ?>
 
 				</div>
 			</div>
 
+			<!--
 			<div class="fav-icon">
 				<img src="../Imagenes/icons/heart_icon_empty.png" alt="">
 			</div>
+			-->
 
 		</div>
 
