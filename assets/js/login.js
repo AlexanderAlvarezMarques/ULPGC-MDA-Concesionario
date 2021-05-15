@@ -9,14 +9,14 @@ function iniciarsesion(event) {
 	};
   
 	$.ajax({
-			url: "../../ULPGC-MDA-Concesionario/inicio.php",
+			url: "../../inicio.php",
 			type: "POST",
 			data: JSON.stringify(datosRegistro),
 			contentType: "application/json;charset=utf-8",
 			dataType: "json",
 			success: function(res) {
 					alert(res.message);
-					window.location.href = "../../ULPGC-MDA-Concesionario/views/index.php";
+					window.location.href = "../../views/index.php";
 			},
 			error: function(res) {
 					var json_string = JSON.stringify(res);

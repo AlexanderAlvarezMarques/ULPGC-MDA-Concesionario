@@ -2,6 +2,8 @@
 
 include_once __DIR__ . "/../vendor/database/anuncios.php";
 
+session_start();
+
 if (isset($_POST['id'])) {
 	Anuncios::deleteAdvertisement($_POST['id']);
 }
@@ -88,9 +90,11 @@ if ($anuncios !== null && count($anuncios) > $position) {
 				</div>
 			</div>
 
+			<!--
 			<div class="fav-icon">
 				<img src="../Imagenes/icons/heart_icon_empty.png" alt="">
 			</div>
+			-->
 
 		</div>
 

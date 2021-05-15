@@ -1,4 +1,4 @@
 node_modules
 launch.json
 env.json
-config.php
+vendor/database/config.php

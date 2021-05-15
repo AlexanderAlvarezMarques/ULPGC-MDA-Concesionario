@@ -2,6 +2,8 @@
 
 include_once __DIR__ . "/../vendor/database/ofertas.php";
 
+session_start();
+
 if (isset($_POST['id'])) {
   Ofertas::deleteOffer($_POST['id']);
 }
@@ -77,17 +79,20 @@ if ($anuncios !== null && count($anuncios) > $position) {
             <h2><?php echo $precio ?> €</h2>
           </div>
 
-          <div class="group">
-            <button class="btn btn-danger mt-1" onclick='deleteOffer(<?php echo $id ?> )'>Eliminar</button>
-          </div>
+					<?php if($_SESSION['loggedin']) { ?>
+						<div class="group">
+							<button class="btn btn-danger mt-1" onclick='deleteOffer(<?php echo $id ?> )'>Eliminar</button>
+						</div>
+					<?php } ?>
 
         </div>
       </div>
 
+			
       <div class="fav-icon">
         <img src="../Imagenes/icons/heart_icon_empty.png" alt="">
       </div>
-
+			
     </div>
 
 <?php
