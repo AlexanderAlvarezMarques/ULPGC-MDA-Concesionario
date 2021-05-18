@@ -53,3 +53,24 @@ function modifiedAdvertisement() {
       window.location("http://localhost/ULPGC-MDA-Concesionario/views/:")
   });
 }
+
+function addFav(id,nombre,descripcion,src,precio,precio_financiado,marca,modelo,localidad,ano,positiondusuario){
+  $parameters = {
+    "id": id,
+    "nombre": nombre,
+    "description": description,
+    "marca": marca,
+    "modelo": modelo,
+    "ano": ano,
+    "image": image,
+  }
+  $.ajax({
+    data: $parameters,
+    url: '../../components/advertisements-display.php',
+    type: 'post',
+    success:
+    function (response) {
+      $("#page-section").html(response);
+    }
+  });
+}

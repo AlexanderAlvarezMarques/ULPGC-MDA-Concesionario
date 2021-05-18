@@ -27,8 +27,8 @@ class Favoritos {
     }
 
     //Eliminar anuncio 
-    public static function deleteFav($idOferta){
-        $result = DB::executeSQL("DELETE FROM favoritos WHERE id = ?",[$idOferta]);
+    public static function deleteFav($idFavorito){
+        $result = DB::executeSQL("DELETE FROM favoritos WHERE id = ?",[$idFavorito]);
         return $result === null ? false : true;
     }
  

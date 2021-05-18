@@ -40,6 +40,10 @@
 						<a class="nav-link text-uppercase text-expanded" href="anadir_anuncio.php">Crear Anuncio</a>
 					</li>
 
+					<li class="nav-item active" style="padding-right:5em">
+						<a class="nav-link text-uppercase text-expanded" href="favoritos.php">Favoritos</a>
+					</li>
+
 					<li class="nav-item active">
 						<a class="nav-link text-uppercase text-expanded" href="logout.php" style="color: #7a5151">Cerrar sesión</a>
 					</li>
