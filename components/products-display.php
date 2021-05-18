@@ -2,6 +2,7 @@
 
 include_once __DIR__ . "/../vendor/database/productos.php";
 
+
 if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
@@ -16,7 +17,7 @@ if ($productos == -1) {
 }
 
 if ($productos == -2) {
-	$html = "<p>Se ha producido un error al intentar cargar los productos</p>";
+	$html = "<p>Se ha producido un error al intentar cargar los anuncios</p>";
 
 	echo $html;
 	return;
@@ -32,28 +33,31 @@ if ($productos !== null && count($productos) > $position) {
 
 	while ($position < $limit && $position < count($productos)) {
 
-		$productos = $productos[$position];
+		$producto = $productos[$position];
 
-		$id = $productos["idproductos"];
-		$nombre = $productos["nombre"];
-		$descripcion = $productos["descripcion"];
-		$src = "data:image/jpeg;base64," . base64_encode($productos['foto']) . '"';
-		$precio = $productos["precio"];
-		$marca = $productos["marca"];
-		$modelo = $productos["modelo"];
+		$id = $producto["idproductos"];
+		$nombre = $producto["nombre"];
+		$descripcion = $producto["descripcion"];
+		$src = "data:image/jpeg;base64," . base64_encode($producto['foto']) . '"';
+		$marca = $producto["marca"];
+		$modelo = $producto["modelo"];
+		$cantidad = $producto["cantidad"];
+		$precio = $producto["precio"];
 		
+
 		//<img src="data:image/jpeg;base64,'.base64_encode( $result['image'] ).'"/>
 
 ?>
 
 		<div class="single-ad-about">
 
-			<img class="ad-image" src="data:image/jpeg;base64, <?php echo base64_encode($anuncio['foto']) ?>" alt="Foto de coche">
+			<img class="ad-image" src="data:image/jpeg;base64, <?php echo base64_encode($anuncio['foto']) ?>" alt="Foto de producto">
 
 			<div class="car-details">
 
 				<!-- Cambiar por variables -->
 				<h3><?php echo $marca . " " . $modelo ?></h3>
+				
 
 				<div class="prices">
 
@@ -63,6 +67,9 @@ if ($productos !== null && count($productos) > $position) {
 						<h2><?php echo $precio ?> €</h2>
 					</div>
 
+					<div class="group">
+						<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
+					</div>
 
 				</div>
 			</div>

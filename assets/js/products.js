@@ -1,4 +1,4 @@
-function loadOffer(page) {
+function loadProduct(page) {
     $parameters = {
       "page": page
     }
@@ -14,3 +14,5 @@ function loadOffer(page) {
         }
     });
   }
+
+  

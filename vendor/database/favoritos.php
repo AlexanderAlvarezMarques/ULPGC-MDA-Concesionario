@@ -20,13 +20,13 @@ class Favoritos {
         return $result;
     }
 
-    //Añadir una oferta
+    //Añadir una favorito
     public static function addFav($cuenta, $descripcion,$foto, $precio, $marca, $modelo, $año){
         $result = DB::executeSQL("INSERT INTO favoritos(id, nombre_favorito, descripcion_favorito,foto_favorito, precio_favorito, marca_favorito, modelo_favorito,ano_vehiculo_favorito) VALUES (0,?,?,?,?,?,?,?)",[$cuenta, $descripcion,$foto, $precio, $marca, $modelo, $año]);
         return $result === null ? false : true;
     }
 
-    //Eliminar anuncio 
+    //Eliminar favorito 
     public static function deleteFav($idFavorito){
         $result = DB::executeSQL("DELETE FROM favoritos WHERE id = ?",[$idFavorito]);
         return $result === null ? false : true;

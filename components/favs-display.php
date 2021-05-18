@@ -99,12 +99,12 @@ echo '<div class="text-center" style="width: 100%;">';
 
 if ($page > 0) {
 	$page--;
-	echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary'>Prev</button>";
+	echo "<button onclick='loadFavs($page)' class='btn btn-primary'>Prev</button>";
 }
 
 if ($anuncios !== null && $position < count($anuncios)) {
 	$page++;
-	echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary ml-1'>Next</button>";
+	echo "<button onclick='loadFavs($page)' class='btn btn-primary ml-1'>Next</button>";
 }
 
 echo '</div>';

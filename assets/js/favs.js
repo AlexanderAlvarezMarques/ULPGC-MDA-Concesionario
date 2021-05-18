@@ -1,4 +1,4 @@
-function loadAdvertisements(page) {
+function loadFavs(page) {
     $parameters = {
       "page": page
     }
