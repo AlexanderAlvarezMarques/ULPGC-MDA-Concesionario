@@ -1,12 +1,13 @@
 <?php
 
 include_once __DIR__ . "/../vendor/database/anuncios.php";
+include_once __DIR__ . "/../vendor/database/favoritos.php";
 
 if (isset($_POST['id'])) {
 	Anuncios::deleteAdvertisement($_POST['id']);
 }
 if (isset($_POST['id'])) {
-	Favoritos::addFav($_POST['id'],$_POST['nombre'],$_POST['descripcion'],$_POST['src'],$_POST['precio'],$_POST['precio_financiado'],$_POST['marca'],$_POST['modelo'],$_POST['localidad'],$_POST['ano'],$_POST['positiondusuario']);
+	Favoritos::addFav($_POST['id']);
 }
 
 if (!isset($_POST['page'])) $page = 0;
@@ -82,7 +83,7 @@ if ($anuncios !== null && count($anuncios) > $position) {
 
 					<div class="group">
 					<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary">Modificar</button></a>
-						<button class="btn btn-danger mt-1" onclick='addFav(<?php echo $id,$nombre,$descripcion,$src,$precio,$precio_financiado,$marca,$modelo,$localidad,$ano,$positiondusuario ?> )'>Añadir a Favorito</button>
+						<button class="btn btn-danger mt-1" onclick='addFav(<?php echo $id ?> )'>Añadir a Favorito</button>
 						<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
 					</div>
 

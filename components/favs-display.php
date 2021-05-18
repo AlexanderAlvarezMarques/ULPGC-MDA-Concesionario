@@ -78,7 +78,7 @@ if ($anuncios !== null && count($anuncios) > $position) {
 					</div>
 
 					<div class="group">
-						<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
+						<button class="btn btn-danger mt-1" onclick='deleteFav(<?php echo $id ?> )'>Eliminar</button>
 					</div>
 
 				</div>

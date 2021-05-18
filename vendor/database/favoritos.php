@@ -21,8 +21,8 @@ class Favoritos {
     }
 
     //Añadir una favorito
-    public static function addFav($cuenta, $descripcion,$foto, $precio, $marca, $modelo, $año){
-        $result = DB::executeSQL("INSERT INTO favoritos(id, nombre_favorito, descripcion_favorito,foto_favorito, precio_favorito, marca_favorito, modelo_favorito,ano_vehiculo_favorito) VALUES (0,?,?,?,?,?,?,?)",[$cuenta, $descripcion,$foto, $precio, $marca, $modelo, $año]);
+    public static function addFav($id){
+        $result = DB::executeSQL("INSERT INTO favoritos SELECT * FROM anuncios WHERE id= ?",[$id]);
         return $result === null ? false : true;
     }
 

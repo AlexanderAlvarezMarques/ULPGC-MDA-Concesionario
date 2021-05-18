@@ -15,7 +15,7 @@ function loadFavs(page) {
     });
   }
 
-  function deleteAdvertisement(id) {
+  function deleteFav(id) {
     $parameters = {
       "id": id
     }
@@ -23,7 +23,7 @@ function loadFavs(page) {
     $.ajax({
   
       data: $parameters,
-      url: '../../components/favs-display.php',
+      url: '../components/favs-display.php',
       type: 'post',
       success:
         function (response) {

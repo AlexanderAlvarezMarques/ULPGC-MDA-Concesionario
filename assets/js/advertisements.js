@@ -54,15 +54,9 @@ function modifiedAdvertisement() {
   });
 }
 
-function addFav(id,nombre,descripcion,src,precio,precio_financiado,marca,modelo,localidad,ano,positiondusuario){
+function addFav(id){
   $parameters = {
     "id": id,
-    "nombre": nombre,
-    "description": description,
-    "marca": marca,
-    "modelo": modelo,
-    "ano": ano,
-    "image": image,
   }
   $.ajax({
     data: $parameters,

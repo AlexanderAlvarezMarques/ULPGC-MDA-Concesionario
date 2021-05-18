@@ -18,7 +18,7 @@ if (isset($_POST['send'])) {
 
   include_once "vendor/database/favoritos.php";
 
-  $result = Favoritos::addFav($nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano_vehiculo);
+  $result = Favoritos::addFav($id);
 
   if ($result !== null) {
     header('Location:ULPGC-MDA-Concesionario/views/anadir_favorito.php?error=false');
