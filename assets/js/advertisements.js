@@ -68,3 +68,18 @@ function addFav(id){
     }
   });
 }
+
+function compare(id){
+  $parameters = {
+    "id": id,
+  }
+  $.ajax({
+    data: $parameters,
+    url: '../../components/advertisements-display.php',
+    type: 'post',
+    success:
+    function (response) {
+      $("#page-section").html(response);
+    }
+  });
+}

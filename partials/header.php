@@ -15,6 +15,9 @@
 					<a class="nav-link text-uppercase text-expanded" href="index.php">Home</a>
 				</li>
 				<li class="nav-item active" style="padding-right:3em">
+					<a class="nav-link text-uppercase text-expanded" href="comparador.php">ESTE WEON</a>
+				</li>
+				<li class="nav-item active" style="padding-right:3em">
 					<a class="nav-link text-uppercase text-expanded" href="novedades.php">Ofertas</a>
 				</li>
 				<li class="nav-item active" style="padding-right:3em">
