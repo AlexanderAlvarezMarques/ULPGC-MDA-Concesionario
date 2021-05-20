@@ -11,16 +11,16 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav mx-auto">
-				<li class="nav-item active" style="padding-right:5em">
+				<li class="nav-item active" style="padding-right:3em">
 					<a class="nav-link text-uppercase text-expanded" href="index.php">Home</a>
 				</li>
-				<li class="nav-item active" style="padding-right:5em">
+				<li class="nav-item active" style="padding-right:3em">
 					<a class="nav-link text-uppercase text-expanded" href="novedades.php">Ofertas</a>
 				</li>
-				<li class="nav-item active" style="padding-right:5em">
+				<li class="nav-item active" style="padding-right:3em">
 					<a class="nav-link text-uppercase text-expanded" href="anuncios.php">Anuncios</a>
 				</li>
-				<li class="nav-item active" style="padding-right:5em">
+				<li class="nav-item active" style="padding-right:3em">
 					<a class="nav-link text-uppercase text-expanded" href="nosotros.php">Nosotros</a>
 				</li>
 
@@ -29,18 +29,18 @@
 					$_SESSION['loggedin']=false;
 				?>
 
-					<li class="nav-item active" style="padding-right:5em">
+					<li class="nav-item active" style="padding-right:3em">
 						<a class="nav-link text-uppercase text-expanded" href="login.php">Login</a>
 					</li>
 
 				<?php } ?>
 
 				<?php if ($_SESSION['loggedin']) {?>
-					<li class="nav-item active" style="padding-right:5em">
+					<li class="nav-item active" style="padding-right:3em">
 						<a class="nav-link text-uppercase text-expanded" href="anadir_anuncio.php">Crear Anuncio</a>
 					</li>
 
-					<li class="nav-item active" style="padding-right:5em">
+					<li class="nav-item active" style="padding-right:3em">
 						<a class="nav-link text-uppercase text-expanded" href="favoritos.php">Favoritos</a>
 					</li>
 

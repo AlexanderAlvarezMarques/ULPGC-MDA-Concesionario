@@ -64,35 +64,36 @@ if ($anuncios !== null && count($anuncios) > $position) {
 
 			<div class="car-details">
 
-				<!-- Cambiar por variables -->
 				<h3><?php echo $marca . " " . $modelo ?></h3>
 				<h5 style="color: #474747;"><?php echo $ano ?></h5>
 				<h6 style="color: #474747;"><?php echo $localidad ?></h6>
 
-				<div class="prices">
-
+				<div class="prices" style="width:60%;">
 					<div class="group">
 						<h7>Precio financiado</h7>
 						<h2 style="color: #c00000;"><?php echo $precio_financiado ?> €</h2>
 					</div>
-
 					<div class="group">
 						<h7>Precio al contado</h7>
 						<h2><?php echo $precio ?> €</h2>
 					</div>
-
-					<div class="group">
-					<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary">Modificar</button></a>
+				</div>
+				<br>
+				<br>
+				<br>
+				<div>
+					<div>
+						<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary">Modificar</button></a>
+						<button class="btn btn-primary mt-1" onclick='compare(<?php echo $id ?> )'>Comparar</button>
 						<button class="btn btn-danger mt-1" onclick='addFav(<?php echo $id ?> )'>Añadir a Favorito</button>
 						<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
 					</div>
-
 				</div>
 			</div>
 
-			<div class="fav-icon">
+			<!-- <div class="fav-icon">
 				<img src="../Imagenes/icons/heart_icon_empty.png" alt="">
-			</div>
+			</div> -->
 
 		</div>
 
