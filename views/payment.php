@@ -13,7 +13,6 @@ if (isset($_POST['buy'])) {
 	}
 }
 
-
 include ("../partials/head.php");
 
 // Calculate final price
