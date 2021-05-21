@@ -63,10 +63,7 @@ if ($productos !== null && count($productos) > $position) {
 						<h2><?php echo $precio ?> €</h2>
 					</div>
 
-					<div class="group">
-						<input type="checkbox">Añadir componente</input>
-						
-					</div>
+					<input if="" type="checkbox"/>
 
 				</div>
 			</div>
