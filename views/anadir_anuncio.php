@@ -19,7 +19,7 @@ include("../partials/head.php");
       else if ($error == "true")
         $message = "Campo no válido";
       else
-        header("Location:/views/anuncios.php");
+        header("Location: ./anuncios.php");
 
     }
     ?>

@@ -9,7 +9,7 @@ include __DIR__ . "/../vendor/database/anuncios.php";
 if (isset($_POST['buy'])) {
 	if ($_POST['buy']) {
 		Anuncios::deleteAdvertisement($_POST['id']);
-		header("Location:/views");
+		header("Location: ./");
 	}
 }
 

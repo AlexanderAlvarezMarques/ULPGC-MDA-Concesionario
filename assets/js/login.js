@@ -9,14 +9,14 @@ function iniciarsesion(event) {
 	};
   
 	$.ajax({
-			url: "../../inicio.php",
+			url: window.location.pathname + "../../../inicio.php",
 			type: "POST",
 			data: JSON.stringify(datosRegistro),
 			contentType: "application/json;charset=utf-8",
 			dataType: "json",
 			success: function(res) {
 					alert(res.message);
-					window.location.href = "../../views/index.php";
+					window.location.href = window.location.pathname + "../../";
 			},
 			error: function(res) {
 					var json_string = JSON.stringify(res);

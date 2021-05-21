@@ -21,9 +21,9 @@ if (isset($_POST['send'])) {
   $result = Anuncios::addAdvertisement($nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano_vehiculo);
 
   if ($result !== null) {
-    header('Location:/views/anadir_anuncio.php?error=false');
+    header('Location: ./views/anadir_anuncio.php?error=false');
   } else {
-    header('Location:/views/anadir_anuncio.php?error=null');
+    header('Location: ./views/anadir_anuncio.php?error=null');
   }
 
 
