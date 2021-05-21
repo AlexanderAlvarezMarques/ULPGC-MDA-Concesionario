@@ -13,25 +13,27 @@ include("../partials/head.php");
   include("../partials/header.php");
   ?>
 
-  <section id="page-section" class="page-section">  </section>
+  <section id="page-section" class="page-section"> </section>
 
-  <script>
-    $parameters = {
-      "page": 0
-    }
-
-    $.ajax({
-
-      data: $parameters,
-      url: '../components/products-display.php',
-      type: 'post',
-      success: function(response) {
-        $("#page-section").html(response);
+  <form action="payment.php" method="POST">
+    <script>
+      $parameters = {
+        "page": 0
       }
 
-    });
-  </script>
-  <button class="btn btn-danger buy-button">Finalizar compra</button>
+      $.ajax({
+
+        data: $parameters,
+        url: '../components/products-display.php',
+        type: 'post',
+        success: function(response) {
+          $("#page-section").html(response);
+        }
+
+      });
+    </script>
+    <button class="btn btn-danger buy-button">Finalizar compra</button>
+  </form>
   <?php
   include("../partials/footer.php");
   ?>

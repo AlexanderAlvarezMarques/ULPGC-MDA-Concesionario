@@ -64,12 +64,11 @@ if ($productos !== null && count($productos) > $position) {
 					</div>
 					<div class="group">
 						<h6>Añadir componente</h6>
-						<input type="checkbox" style="width: 50px; -webkit-transform: scale(2); align-self: center;" />
+						<input type="checkbox" style="width: 50px; -webkit-transform: scale(2); align-self: center;" name="<?php echo $nombre ?>" />
 					</div>
 				</div>
 			</div>
 		</div>
-
 <?php
 		$position = $position + 1;
 	}
