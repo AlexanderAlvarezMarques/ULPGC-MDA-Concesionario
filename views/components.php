@@ -31,7 +31,7 @@ include("../partials/head.php");
 
     });
   </script>
-  <button class="btn btn-danger buy-button col-3">Finalizar compra</button>
+  <button class="btn btn-danger buy-button">Finalizar compra</button>
   <?php
   include("../partials/footer.php");
   ?>

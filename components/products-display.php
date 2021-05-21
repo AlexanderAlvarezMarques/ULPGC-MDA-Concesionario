@@ -46,7 +46,7 @@ if ($productos !== null && count($productos) > $position) {
 
 ?>
 
-		<div class="single-ad-about">
+		<div class="single-ad-about tamano-fijo">
 
 			<img class="ad-image" src="data:image/jpeg;base64, <?php echo base64_encode($anuncio['foto_anuncio']) ?>" alt="Foto de producto">
 
@@ -62,13 +62,14 @@ if ($productos !== null && count($productos) > $position) {
 						<h7>Precio:</h7>
 						<h2><?php echo $precio ?> €</h2>
 					</div>
-
-					<input if="" type="checkbox"/>
-
+					<div class="group">
+						<h6>Añadir componente</h6>
+						<input type="checkbox" style="width: 50px; -webkit-transform: scale(2); align-self: center;" />
+					</div>
 				</div>
 			</div>
 		</div>
-		
+
 <?php
 		$position = $position + 1;
 	}
