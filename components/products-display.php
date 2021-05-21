@@ -64,8 +64,7 @@ if ($productos !== null && count($productos) > $position) {
 					</div>
 
 					<div class="group">
-						<a href="../views/components.php"><button class="btn btn-warning btn-block">Añadir</button></a>
-						<button class="btn btn-danger mt-1 btn-block" onclick='deleteProduct(<?php echo $id ?> )'>Eliminar</button>
+						<input type="checkbox">Añadir componente</input>
 						
 					</div>
 
