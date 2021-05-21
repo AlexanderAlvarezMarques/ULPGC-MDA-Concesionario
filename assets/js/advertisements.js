@@ -50,6 +50,6 @@ function modifiedAdvertisement() {
     url: '../modified_anuncio.php',
     type: 'post',
     success:
-      window.location("http://localhost/ULPGC-MDA-Concesionario/views/:")
+      window.location("mda.servidor.com/views/:")
   });
 }
