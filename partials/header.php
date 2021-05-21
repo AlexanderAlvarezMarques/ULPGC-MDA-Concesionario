@@ -40,7 +40,7 @@
 						<a class="nav-link text-uppercase text-expanded" href="anadir_anuncio.php">Crear Anuncio</a>
 					</li>
 					<li class="nav-item active" style="padding-right:3em">
-						<a class="nav-link text-uppercase text-expanded" href="add_component.php">Componentes</a>
+						<a class="nav-link text-uppercase text-expanded" href="components.php">Componentes</a>
 					</li>
 					<li class="nav-item active" style="padding-right:3em;">
 						<label><i class="material-icons" style="font-size:24px;color:white;">shopping_cart</i></label>

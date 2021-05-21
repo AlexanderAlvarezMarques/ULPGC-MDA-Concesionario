@@ -44,7 +44,7 @@ if ($anuncios !== null && count($anuncios) > $position) {
 		$src = "data:image/jpeg;base64," . base64_encode($anuncio['foto_anuncio']) . '"';
 		$precio = $anuncio["precio_anuncio"];
 		//$precio_financiado = $anuncio["preciof_anuncio"];
-		$precio_financiado = $precio*1.12;
+		$precio_financiado = $precio * 1.12;
 		$marca = $anuncio["marca_anuncio"];
 		$modelo = $anuncio["modelo_anuncio"];
 		$localidad = $anuncio["localidad_anuncio"];
@@ -79,10 +79,10 @@ if ($anuncios !== null && count($anuncios) > $position) {
 					</div>
 
 					<div class="group">
-					<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary">Modificar</button></a>
-					<a href="../views/add_component.php?id=<?php echo $id ?>"><button class="btn btn-warning mt-1">Comprar</button></a>
-					<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
-					
+						<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary">Modificar</button></a>
+						<a href="../views/components.php"><button class="btn btn-warning mt-1">Comprar</button></a>
+						<button class="btn btn-danger mt-1" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
+
 					</div>
 
 				</div>

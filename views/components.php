@@ -5,7 +5,7 @@
 include("../partials/head.php");
 ?>
 
-<script src="../assets/js/advertisements.js"></script>
+<script src="../assets/js/products.js"></script>
 
 <body>
 
@@ -23,7 +23,7 @@ include("../partials/head.php");
     $.ajax({
 
       data: $parameters,
-      url: '../components/components-display.php',
+      url: '../components/products-display.php',
       type: 'post',
       success: function(response) {
         $("#page-section").html(response);
@@ -31,7 +31,7 @@ include("../partials/head.php");
 
     });
   </script>
-
+  <button class="btn btn-danger buy-button col-3">Finalizar compra</button>
   <?php
   include("../partials/footer.php");
   ?>

@@ -344,3 +344,10 @@ p {
   margin-left: 660px; 
   margin-top: 10px;
 }
+
+.buy-button{
+  position: fixed;
+  top: 450px;
+  right: 50px;
+  padding: 25px;
+}
