@@ -70,7 +70,7 @@ $positiondusuario = $anuncio[0]["idusuario"];
     </script>
 
     <form id='loginForm' action="../modifyanuncio.php" class="my-4" name="modifyForm" method='post' enctype="multipart/form-data" style="width:30%; font-family: 'Arial'">
-        <label><img src='../Imagenes/AddForm/car-xxl.png' alt="Imagen de inicio" style="width: 125px; height: 125px;" /></label>
+    <label><i class="material-icons" style="font-size:100px;color:white;">directions_car</i></label>
         <section>
             <input id='nombre_anuncio' name='nombre' type='text' placeholder='Título del anuncio' value='<?php echo $nombre ?>' required />
 

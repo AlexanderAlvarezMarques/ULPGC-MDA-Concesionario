@@ -33,4 +33,6 @@
   <!-- JQuery -->
   <script src="../vendor/jquery/jquery.min.js"></script>
 
+  <!-- Google -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
