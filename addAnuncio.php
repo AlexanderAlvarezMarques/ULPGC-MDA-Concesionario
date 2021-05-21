@@ -21,11 +21,7 @@ if (isset($_POST['send'])) {
   $result = Anuncios::addAdvertisement($nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano_vehiculo);
 
   if ($result !== null) {
-<<<<<<< HEAD
-    header('Location:' . __DIR__ . '../../views/anadir_anuncio.php?error=false');
-=======
     header('Location:/views/anadir_anuncio.php?error=false');
->>>>>>> Create Payment branch
   } else {
     header('Location:/views/anadir_anuncio.php?error=null');
   }

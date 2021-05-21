@@ -2,7 +2,34 @@
 <html lang="es">
 
 <?php
+
+include __DIR__ . "/../vendor/database/productos.php";
+include __DIR__ . "/../vendor/database/anuncios.php";
+
+if (isset($_POST['buy'])) {
+	if ($_POST['buy']) {
+		Anuncios::deleteAdvertisement($_POST['id']);
+		header("Location:/views");
+	}
+}
+
+
 include ("../partials/head.php");
+
+// Calculate final price
+$products = Productos::getProducts();
+$price = Anuncios::getAdvertisement($_POST['advertisement'])[0]['precio_anuncio'];
+
+foreach ($products as $product) {
+
+	$name = $product["nombre"];
+
+	if (isset($_POST[$name])) {
+		$price += $product['precio'];
+	}
+
+}
+
 ?>
 
 <head>
@@ -17,7 +44,7 @@ include ("../partials/head.php");
 
 	<div class="container payment">
 		
-		<form action="" method="POST">
+		<form action="payment.php" method="POST">
 		
 			<div class="form-group card_number">
 				<label for="card_number">Número de tarjeta:</label>
@@ -66,14 +93,14 @@ include ("../partials/head.php");
 
 			<div class="form-group flex-vertical size">
 				<p>Price:</p>
-				<b>12000€</b>
+				<b><?php echo $price ?>€</b>
 			</div>
 
 			<div class="form-group size text-center">
 				<input type="submit" class="btn btn-primary mt-4" value="Comprar">
+				<input type="hidden" name="buy" value="true">
+				<input type="hidden" name="id" value="<?php echo $_POST['advertisement'] ?>">
 			</div>
-
-			<input type="checkbox" name="" id="">
 		
 		</form>
 
