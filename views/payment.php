@@ -72,6 +72,8 @@ include ("../partials/head.php");
 			<div class="form-group size text-center">
 				<input type="submit" class="btn btn-primary mt-4" value="Comprar">
 			</div>
+
+			<input type="checkbox" name="" id="">
 		
 		</form>
 
