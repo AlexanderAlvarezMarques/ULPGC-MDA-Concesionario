@@ -7,13 +7,13 @@ $advertisementsIds = array();
 
         //Añadir anuncio a la comparacion
         public static function compare($id){
-            array_push($advertisementsIds, $id);
+            global $advertisementsIds;
+            array_push($advertisementsIds, 34);
         }  
         
         //Coger anuncios
         public static function getAdvertisementsToCompare() {
             global $advertisementsIds;
-            array_push($advertisementsIds, 34);
             $result = null;
             foreach ($advertisementsIds as &$id) {
                 $result = DB::executeSQL("SELECT * FROM anuncios WHERE idanuncios = ?",[$id]);
