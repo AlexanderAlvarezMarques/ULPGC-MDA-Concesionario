@@ -2,13 +2,9 @@
 
 include_once __DIR__ . "/../vendor/database/comparar.php";
 include_once __DIR__ . "/../vendor/database/anuncios.php";
-include_once __DIR__ . "/../vendor/database/favoritos.php";
 
 if (isset($_POST['id'])) {
-	Anuncios::deleteAdvertisement($_POST['id']);
-}
-if (isset($_POST['id'])) {
-	Favoritos::addFav($_POST['id']);
+	Comparar::compare($_POST['id']);
 }
 
 if (!isset($_POST['page'])) $page = 0;

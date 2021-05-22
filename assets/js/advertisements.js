@@ -75,11 +75,11 @@ function compare(id){
   }
   $.ajax({
     data: $parameters,
-    url: '../../components/advertisements-display.php',
+    url: '../components/compare-display.php',
     type: 'post',
     success:
-    function (response) {
-      $("#page-section").html(response);
-    }
+      function (response) {
+        $("#page-section").html(response);
+      }
   });
 }
