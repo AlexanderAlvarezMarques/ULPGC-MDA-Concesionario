@@ -1,4 +1,4 @@
-function loadProduct(page) {
+function loadFavs(page) {
     $parameters = {
       "page": page
     }
@@ -6,7 +6,7 @@ function loadProduct(page) {
     $.ajax({
   
       data: $parameters,
-      url: '../../components/products-display.php',
+      url: '../../components/favs-display.php',
       type: 'post',
       success:
         function (response) {
@@ -15,7 +15,7 @@ function loadProduct(page) {
     });
   }
 
-  function deleteProduct(id) {
+  function deleteFav(id) {
     $parameters = {
       "id": id
     }
@@ -23,7 +23,7 @@ function loadProduct(page) {
     $.ajax({
   
       data: $parameters,
-      url: '../components/productos-display.php',
+      url: '../components/favs-display.php',
       type: 'post',
       success:
         function (response) {

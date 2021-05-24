@@ -4,7 +4,7 @@ if (isset($_POST['send'])) {
 
   # Colocar condicionales de ningun campo vacio así como comprobaciones de patrones
   if ($_POST['nombre'] == "") {
-    header('Location:/views/anadir_anuncio.php?error=true');
+    header('Location:/views/anadir_favorito.php?error=true');
   }
 
 
@@ -16,14 +16,14 @@ if (isset($_POST['send'])) {
   $ano_vehiculo = $_POST['ano_vehiculo'];
   $foto = file_get_contents($_FILES['imagen']['tmp_name']);
 
-  include_once "vendor/database/anuncios.php";
+  include_once "vendor/database/favoritos.php";
 
-  $result = Anuncios::addAdvertisement($nombre, $descripcion, $foto, $precio, $marca, $modelo, $ano_vehiculo);
+  $result = Favoritos::addFav($id);
 
   if ($result !== null) {
-    header('Location: /views/anadir_anuncio.php?error=false');
+    header('Location:ULPGC-MDA-Concesionario/views/anadir_favorito.php?error=false');
   } else {
-    header('Location: /views/anadir_anuncio.php?error=null');
+    header('Location:ULPGC-MDA-Concesionario/views/anadir_favorito.php?error=null');
   }
 
 

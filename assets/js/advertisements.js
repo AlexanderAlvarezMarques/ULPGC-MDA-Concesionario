@@ -53,3 +53,16 @@ function modifiedAdvertisement() {
       window.location("mda.servidor.com/views/:")
   });
 }
+
+function addFav(id){
+  $parameters = {
+    "ida": id,
+  }
+  $.ajax({
+    data: $parameters,
+    url: '../components/advertisements-display.php',
+    type: 'post',
+    success:
+      alert("Coche añadido a favoritos")
+  });
+}

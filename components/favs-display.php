@@ -1,23 +1,15 @@
 <?php
 
-include_once __DIR__ . "/../vendor/database/anuncios.php";
 include_once __DIR__ . "/../vendor/database/favoritos.php";
 
-session_start();
-
 if (isset($_POST['id'])) {
-	Anuncios::deleteAdvertisement($_POST['id']);
-}
-
-if (isset($_POST['ida'])) {
-	//echo "<script>console.log('Test');</script>";
-	Favoritos::addFav($_POST['ida']);
+	Favoritos::deleteFav($_POST['id']);
 }
 
 if (!isset($_POST['page'])) $page = 0;
 else $page = $_POST['page'];
 
-$anuncios = Anuncios::getAdvertisements();
+$anuncios = Favoritos::getFavs();
 $numeroAnunciosPorPagina = 10;
 
 if ($anuncios == -1) {
@@ -46,17 +38,16 @@ if ($anuncios !== null && count($anuncios) > $position) {
 
 		$anuncio = $anuncios[$position];
 
-		$id = $anuncio["idanuncios"];
-		$nombre = $anuncio["nombre_anuncio"];
-		$descripcion = $anuncio["descripcion_anuncio"];
-		$src = "data:image/jpeg;base64," . base64_encode($anuncio['foto_anuncio']) . '"';
-		$precio = $anuncio["precio_anuncio"];
-		//$precio_financiado = $anuncio["preciof_anuncio"];
-		$precio_financiado = $precio * 1.12;
-		$marca = $anuncio["marca_anuncio"];
-		$modelo = $anuncio["modelo_anuncio"];
-		$localidad = $anuncio["localidad_anuncio"];
-		$ano = $anuncio["ano_vehiculo_anuncio"];
+		$id = $anuncio["id"];
+		$nombre = $anuncio["nombre_favorito"];
+		$descripcion = $anuncio["descripcion_favorito"];
+		$src = "data:image/jpeg;base64," . base64_encode($anuncio['foto_favorito']) . '"';
+		$precio = $anuncio["precio_favorito"];
+		$precio_financiado = $precio*1.12;
+		$marca = $anuncio["marca_favorito"];
+		$modelo = $anuncio["modelo_favorito"];
+		$localidad = $anuncio["localidad_favorito"];
+		$ano = $anuncio["ano_vehiculo_favorito"];
 		$positiondusuario = $anuncio["idusuario"];
 
 		//<img src="data:image/jpeg;base64,'.base64_encode( $result['image'] ).'"/>
@@ -65,7 +56,7 @@ if ($anuncios !== null && count($anuncios) > $position) {
 
 		<div class="single-ad-about">
 
-			<img class="ad-image" src="data:image/jpeg;base64, <?php echo base64_encode($anuncio['foto_anuncio']) ?>" alt="Foto de coche">
+			<img class="ad-image" src="data:image/jpeg;base64, <?php echo base64_encode($anuncio['foto_favorito']) ?>" alt="Foto de coche">
 
 			<div class="car-details">
 
@@ -87,20 +78,15 @@ if ($anuncios !== null && count($anuncios) > $position) {
 					</div>
 
 					<div class="group">
-						<a href="../views/modified_anuncio.php?id=<?php echo $id ?>"><button class="btn btn-primary btn-block">Modificar</button></a>
-						<a href="../views/components.php?advertisement=<?php echo $id ?>"><button class="btn btn-warning mt-1 btn-block">Comprar</button></a>
-						<button class="btn btn-danger mt-1" onclick='addFav(<?php echo $id ?> )'>Añadir a Favorito</button>
-						<button class="btn btn-danger mt-1 btn-block" onclick='deleteAdvertisement(<?php echo $id ?> )'>Eliminar</button>
+						<button class="btn btn-danger mt-1" onclick='deleteFav(<?php echo $id ?> )'>Eliminar</button>
 					</div>
 
 				</div>
 			</div>
 
-			<!--
 			<div class="fav-icon">
 				<img src="../Imagenes/icons/heart_icon_empty.png" alt="">
 			</div>
-			-->
 
 		</div>
 
@@ -113,12 +99,12 @@ echo '<div class="text-center" style="width: 100%;">';
 
 if ($page > 0) {
 	$page--;
-	echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary'>Prev</button>";
+	echo "<button onclick='loadFavs($page)' class='btn btn-primary'>Prev</button>";
 }
 
 if ($anuncios !== null && $position < count($anuncios)) {
 	$page++;
-	echo "<button onclick='loadAdvertisements($page)' class='btn btn-primary ml-1'>Next</button>";
+	echo "<button onclick='loadFavs($page)' class='btn btn-primary ml-1'>Next</button>";
 }
 
 echo '</div>';
