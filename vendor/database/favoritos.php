@@ -23,9 +23,16 @@ class Favoritos {
     //Añadir una favorito
     public static function addFav($id){
         $anuncio = DB::executeSQL("SELECT * FROM anuncios WHERE idanuncios= ?",[$id])[0];
+        $param = array(11);
+        $i = 0;
+        foreach ($anuncio as $key=>$value){
+            $param[$i]=$value;
+            $i++;
+        }
         $n = count($anuncio);
-        echo "<script>console.log('$n');</script>";
-        $result = DB::executeSQL("INSERT INTO favoritos (id, nombre_favorito, descripcion_favorito,foto_favorito, precio_favorito,preciof_favorito, marca_favorito, modelo_favorito,localidad_favorito,ano_vehiculo_favorito,idusuario) VALUES (?,?,?,?,?,?,?,?)",$anuncio);
+        //echo "<script>console.info('$anuncio');</script>";
+        //print_r($anuncio);
+        $result = DB::executeSQL("INSERT INTO favoritos (id, nombre_favorito, descripcion_favorito,foto_favorito, precio_favorito,preciof_favorito, marca_favorito, modelo_favorito,localidad_favorito,ano_vehiculo_favorito,idusuario) VALUES (?,?,?,?,?,?,?,?,?,?,?)",$param);
         return $result === null ? false : true;
     }
 

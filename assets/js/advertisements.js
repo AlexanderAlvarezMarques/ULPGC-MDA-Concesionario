@@ -63,8 +63,6 @@ function addFav(id){
     url: '../components/advertisements-display.php',
     type: 'post',
     success:
-    function (response) {
-      $("#page-section").html(response);
-    }
+      alert("Coche añadido a favoritos")
   });
 }
