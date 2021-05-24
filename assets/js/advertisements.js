@@ -56,11 +56,11 @@ function modifiedAdvertisement() {
 
 function addFav(id){
   $parameters = {
-    "id": id,
+    "ida": id,
   }
   $.ajax({
     data: $parameters,
-    url: '../../components/advertisements-display.php',
+    url: '../components/advertisements-display.php',
     type: 'post',
     success:
     function (response) {
